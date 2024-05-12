@@ -1,6 +1,6 @@
 ---
 layout: post
-title: test-post
+title: test-post2
 date: 2024-05-13 16:57:23 +0900
 category: jekyll
 ---

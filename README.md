@@ -19,7 +19,7 @@ permalink: /blog/about/
 > Code block will look like this.
 ```yml
 highlighter-theme: monokai //you can change your syntax color scheme.
-date_format: "%Y-%M-%D" //and date format.
+date_format: "%M-%D-%Y" //and date format.
 ```
 
 ### Screenshots

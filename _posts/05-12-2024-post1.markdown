@@ -1,7 +1,7 @@
 ---
 layout: post
 title: test-post
-date: 05-12-2024 16:57:23 +0900
+date: 2024-05-12 16:57:23 +0900
 category: test post c c++
 ---
 # test-sample

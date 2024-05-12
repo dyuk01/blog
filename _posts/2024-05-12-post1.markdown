@@ -2,7 +2,7 @@
 layout: post
 title: test-post
 date: 2024-05-12 16:57:23 +0900
-category: test post c c++
+category: jekyll update
 ---
 # test-sample
 > Hello!

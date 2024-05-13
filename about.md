@@ -2,6 +2,8 @@
 layout: page
 title: About
 permalink: /about/
+kramdown : 
+    hard_wrap : true
 ---
 
 ## 육도경 | Dokyung (Peter) Yuk

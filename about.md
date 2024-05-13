@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-## Dokyung (Peter) Yuk
+## 육도경 | Dokyung (Peter) Yuk
 > Purdue University Computer Science student who loves to record new knowledge
 
-- Github
+- <a href="https://github.com/dyuk01l">Github</a>
 - Portfolio
 - LinkedIn

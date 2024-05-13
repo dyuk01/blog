@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-## 육도경 | Dokyung (Peter) Yuk
+## 육도경 | Dokyung Yuk
 > Computer Science student learning about Software Engineering.  
 > This is a blog to record what I have learned from studying CS.
 

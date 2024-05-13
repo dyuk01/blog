@@ -2,7 +2,7 @@
 layout: post
 title: test-post3
 date: 2024-05-11 16:57:23 +0900
-category: jekyll
+category: jekyll java
 ---
 # test-sample3
 > Hello!

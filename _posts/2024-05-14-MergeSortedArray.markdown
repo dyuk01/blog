@@ -4,10 +4,24 @@ title: Merge Sorted Array
 date: 2024-05-14 15:56:23 +0900
 categories: leetcode python
 ---
-# Problem
+## Problem
 ![alt text](/blog/public/img/MergeSortedArray.png)
 
-This is code
+## Approach
+> Since there has to be an array with size of m + n, appending nums1 by the size of n would be sufficient enough.  
+> Then, sort the array with sort function to acquire the solution
+
+## Code
 ```python
-print 'hello world'
+class Solution(object):
+    def merge(self, nums1, m, nums2, n):
+        for i in range(n):
+            nums1[i+m] = nums2[i]
+        nums1.sort()
 ```
+## Time Complexity
+> Because this code uses sort function, the time complexity would be O(n log(n))
+> However, since the new array is the size of m + n, the overall time complexity would be O((m+n)log(m+n))
+
+## Space Complexity
+> O(1) since this code does not occupy any space

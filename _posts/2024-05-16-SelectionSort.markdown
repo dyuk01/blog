@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection Sort Algorithm
-date: 2024-05-16 10:33:00 +0900
+date: 2024-05-16
 categories: algorithm python
 ---
 ## Problem

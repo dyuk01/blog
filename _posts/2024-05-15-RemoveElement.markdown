@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Remove Element
-date: 2024-05-15 10:33:00 +0900
+date: 2024-05-15 15:13:00 +0900
 categories: leetcode String/Array python
 ---
 ## Problem

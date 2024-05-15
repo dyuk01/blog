@@ -22,7 +22,8 @@ codes with limited memory storage.
 ## Benefits
 - Memory Efficient
 > Uses minimum memory.
-- Avoids <span class="hover-container">Memory Overhead<span class="info-box">Memory overhead refers to extra memory space consumed by a program/process beyond the actual data needed.</span></span>
+
+- Avoids <span class="hover-container"><span class="hover-target">Memory Overhead</span>Memory overhead<span class="info-box">Memory overhead refers to extra memory space consumed by a program/process beyond the actual data needed.</span></span>
 >  By limiting the extra space used, these algorithms avoid the overhead  
 associated with dynamic memory allocation and deallocation
 - Speed Improvement

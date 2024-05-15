@@ -21,7 +21,7 @@ class Solution(object):
 ```
 ## Time Complexity
 Because this code uses sort function, the time complexity would be O(n log(n)).  
-However, since the code utilizes iterates through m and n elements, the overall time complexity would be O((m+n)log(m+n)).
+However, since the code iterates through m and n elements, the overall time complexity would be O((m+n)log(m+n)).
 
 ## Space Complexity
 O(1) since this code does not occupy any space.

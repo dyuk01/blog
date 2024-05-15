@@ -31,7 +31,7 @@ svg:
 # Build settings
 # theme: minima
 highlighter-theme: monokai
-date_format: "%m-%d-%Y"
+date_format: "%m/%d/%Y"
 plugins:
   - jekyll-feed
 category_dir: blog/category/

@@ -9,11 +9,15 @@ Memory overhead refers to extra memory space consumed by a program/process beyon
 
 ### Different Types of Overhead
 - Data Structure Overhead
-- - hi
+  - hi
 - Memory Management Overhead
+  - hello
 - Operating System Overhead
+  - hi
 - Thread Management Overhead
+  - hello
 - Virtualization and Containerization Overhead
+ - hi
 
 
 ## Calculation

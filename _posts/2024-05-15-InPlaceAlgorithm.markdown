@@ -58,6 +58,8 @@ associated with dynamic memory allocation and deallocation
 .hover-container {
     position: relative;
     display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .info-box {

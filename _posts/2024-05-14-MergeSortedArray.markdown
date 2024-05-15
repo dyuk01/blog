@@ -8,8 +8,7 @@ categories: leetcode String/Array python
 ![alt text](/blog/public/img/MergeSortedArray.png)
 
 ## Approach
-Since there has to be an array with size of m + n, appending nums1 by the size of n would be sufficient enough.  
-Then, sort the array with sort function to acquire the solution.
+Since num1's size already accomodates m + n, we simply have to store variables of num2 into num1.   
 
 ## Code
 ```python

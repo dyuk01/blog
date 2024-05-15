@@ -10,34 +10,38 @@ Usually, the extra storage space is used during the swap stage to keep track of 
 
 ## Characteristics
 - Constant Space Complexity
-> In-place algorithm typically uses O(1) space
+> In-place algorithm typically uses O(1) space.
 - Data Modification
-> Input data is directly modified without requiring any additional memory
+> Input data is directly modified without requiring any additional memory.
 - Efficiency 
 > In-place algorithms are memory efficient, making them suitable for large data sets or  
-codes with limited memory storage
+codes with limited memory storage.
 
-## Pros
+## Benefits
+- Memory Efficient
+> Uses minimum memory.
+- Speed Improvement
+> Reduced memory allocation, which leads to faster performance.
+## Drawbacks
+- Complex
+> Often more complex to implement than out-of-place algorithms such as Merge Sort.
+- Debug Difficulty
+> Modifies the original input data, which leads to more difficult debugging or error recovery.
 
-## Cons
 
 ## Examples of In-Place Algorithms
 ### Sorting Algorithms
 - Bubble Sort
-> Swaps elements in the same array
+> Swaps elements in the same array.
 - Insertion Sort
-> Shifts elements within the array
+> Shifts elements within the array.
 - Selection Sort
-> Swaps elements within the array
+> Swaps elements within the array.
 - Quick Sort
-> Recursively sorts the elements
+> Recursively sorts the elements.
 
 ### Array Manipulation
 - Reversing an Array
-> Swaps elements from both ends moving towards the center
+> Swaps elements from both ends moving towards the center.
 - In-place Rotation
-> Rotates elements within the array
-
-## Time Complexity
-
-## Space Complexity
+> Rotates elements within the array.

@@ -60,11 +60,6 @@ associated with dynamic memory allocation and deallocation
     display: inline-block;
 }
 
-.hover-target {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
 .info-box {
     visibility: hidden;
     width: 200px;

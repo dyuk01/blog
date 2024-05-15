@@ -17,10 +17,12 @@ Usually, the extra storage space is used during the swap stage to keep track of 
 > In-place algorithms are memory efficient, making them suitable for large data sets or  
 codes with limited memory storage.
 
+
+
 ## Benefits
 - Memory Efficient
 > Uses minimum memory.
-- Avoids <a href="https://dyuk01.github.io/blog/concept/memory/2024/05/15/MemoryOverhead.html">Memory Overhead</a>
+- Avoids <span class="hover-container">Memory Overhead<span class="info-box">Memory overhead refers to extra memory space consumed by a program/process beyond the actual data needed.</span></span></a>
 >  By limiting the extra space used, these algorithms avoid the overhead  
 associated with dynamic memory allocation and deallocation
 - Speed Improvement
@@ -49,3 +51,32 @@ associated with dynamic memory allocation and deallocation
 > Swaps elements from both ends moving towards the center.
 - In-place Rotation
 > Rotates elements within the array.
+
+<style>
+.hover-container {
+    position: relative;
+    display: inline-block;
+}
+
+.info-box {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the hover element */
+    left: 50%;
+    margin-left: -100px; /* Center the box */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hover-container:hover .info-box {
+    visibility: visible;
+    opacity: 1;
+}
+</style>

@@ -20,7 +20,7 @@ codes with limited memory storage.
 ## Benefits
 - Memory Efficient
 > Uses minimum memory.
-- Avoids - <a href="https://dyuk01.github.io/blog/concept/memory/2024/05/15/MemoryOverhead.html">Memory Overhead</a>
+- Avoids <a href="https://dyuk01.github.io/blog/concept/memory/2024/05/15/MemoryOverhead.html">Memory Overhead</a>
 >  By limiting the extra space used, these algorithms avoid the overhead  
 associated with dynamic memory allocation and deallocation
 - Speed Improvement

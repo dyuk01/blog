@@ -1,15 +1,38 @@
-<article class="post">
-	<header class="post-header">
-		<div class="post-title"> 
-			{{ page.title | escape }}
-		</div>
-		<time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-			{%- assign date_format = site.date_forma | default: "%m/%d/%Y" -%}
-			{{ page.date | date: date_format }}
-		</time>		
-	</header>
+<!-- _layouts/post.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | escape }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+<body>
+    <article class="post">
+        <header class="post-header">
+            <div class="post-title"> 
+                {{ page.title | escape }}
+            </div>
+            <time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.date_format | default: "%m/%d/%Y" -%}
+                {{ page.date | date: date_format }}
+            </time>        
+        </header>
 
-	<div class="post-content">
-		{{ content }}
-	</div>
-</article>
+        <div class="post-content">
+            {{ content }}
+        </div>
+
+        <footer class="post-footer">
+            <div class="navigation">
+                {% if page.previous %}
+                    <a href="{{ page.previous.url | relative_url }}" class="nav-arrow left">&larr; Previous</a>
+                {% endif %}
+                {% if page.next %}
+                    <a href="{{ page.next.url | relative_url }}" class="nav-arrow right">Next &rarr;</a>
+                {% endif %}
+            </div>
+        </footer>
+    </article>
+</body>
+</html>

@@ -10,11 +10,11 @@ categories: leetcode String/Array python
 ## Approach
 The goal is to remove a specific number from an int array  
 To achieve this, we need to use <a href="https://dyuk01.github.io/blog/algorithm/2024/05/15/InPlaceAlgorithm.html">in-place algorithm</a>.  
-0. To begin, value that needs to be removed will be called <p style="color:orange;">val</p>
+0. To begin, value that needs to be removed will be called <p style="color:#FFA500;">val</p>
 1. Initialize index to 0, which represents number of non-target elements in the array
 2. Operate the following procedure while iterating through the array:
-- If the current value is not <p style="color:orange;">val</p> : 
-- Replace the current value with non-<p style="color:orange;">val</p> variables
+- If the current value is not <p style="color:#FFA500;">val</p> : 
+- Replace the current value with non-<p style="color:#FFA500;">val</p> variables
 - Increment index by 1
 3. Return index
 

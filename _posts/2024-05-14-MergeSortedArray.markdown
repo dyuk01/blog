@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Merge Sorted Array
-#date: 2024-05-14 15:56:00 +0900
-date: 2024-05-14
+ddate: 2024-05-14
 categories: leetcode String/Array python
 ---
 ## Problem

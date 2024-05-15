@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Memory Overhead
-date: 2024-05-15 17:27:00 +0900
+date: 2024-05-15 
 categories: concept memory
 ---
 ## Definition

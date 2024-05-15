@@ -22,7 +22,7 @@ codes with limited memory storage.
 ## Benefits
 - Memory Efficient
 > Uses minimum memory.
-- Avoids <span class="hover-container">Memory Overhead<span class="info-box">Memory overhead refers to extra memory space consumed by a program/process beyond the actual data needed.</span></span></a>
+- Avoids <span class="hover-container">Memory Overhead<span class="info-box">Memory overhead refers to extra memory space consumed by a program/process beyond the actual data needed.</span></span>
 >  By limiting the extra space used, these algorithms avoid the overhead  
 associated with dynamic memory allocation and deallocation
 - Speed Improvement
@@ -52,10 +52,16 @@ associated with dynamic memory allocation and deallocation
 - In-place Rotation
 > Rotates elements within the array.
 
+
 <style>
 .hover-container {
     position: relative;
     display: inline-block;
+}
+
+.hover-target {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .info-box {

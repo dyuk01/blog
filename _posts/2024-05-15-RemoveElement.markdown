@@ -9,11 +9,26 @@ categories: leetcode String/Array python
 
 ## Approach
 The goal is to remove a specific number from an int array  
-To achieve this, we need to use one of the <a href="https://dyuk01.github.io/blog/algorithm/2024/05/15/InPlaceAlgorithm.html">in-order algorithm</a>
+To achieve this, we need to use <a href="https://dyuk01.github.io/blog/algorithm/2024/05/15/InPlaceAlgorithm.html">in-order algorithm</a>.  
+1. Initialize index to 0, which represents number of non-target elements in the array
+2. Iterate through the array, and increment index when the current value is not equal to the value
+3. Return index
+
 ## Code
 ```python
-
+class Solution(object):
+    def removeElement(self, nums, val):
+        index = 0
+        for i in range(len(nums)) :
+            if nums[i] != val :
+                nums[index] = nums[i]
+                index += 1
+        return index
 ```
 ## Time Complexity
+O(n)
+> Iterates through the array once 
 
 ## Space Complexity
+O(1)
+> Does not occupy any memory

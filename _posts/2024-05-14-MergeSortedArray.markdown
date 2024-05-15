@@ -19,8 +19,10 @@ class Solution(object):
         nums1.sort()
 ```
 ## Time Complexity
-Because this code uses sort function, the time complexity would be O(n log(n)).  
-However, since the code iterates through array size of m and n, the overall time complexity would be O((m+n)log(m+n)).
+O((m+n)log(m+n))
+> Because this code uses sort function, the time complexity would be O(n log(n)).  
+> However, since the code iterates through array size of m and n, the overall time complexity would be O((m+n)log(m+n)).
 
 ## Space Complexity
-O(1) since this code does not occupy any space.
+O(1)
+> Does not occupy any memory.

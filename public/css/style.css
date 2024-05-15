@@ -299,45 +299,6 @@ footer {
 }
 
 
-@media (max-width: 576px) {
-	article {
-		font-size: 0.9em;
-		line-height: 1.5;
-	}
-
-	.content {
-		padding: 0px;
-	}
-	.container {
-	    flex-direction: column;
-	}
-
-	.sidebar {
-		font-size: 0.8em;
-		flex: 0 0 auto;
-		flex-flow: row nowrap;
-		height: auto;
-	}
-
-	.sidebar-nav {
-		margin: 0px;
-	}
-
-	.sidebar-item {
-		flex: 1 1 auto;
-	}
-
-	.sidebar-header {
-		margin-bottom: 0px;
-	}
-
-	.sidebar-footer {
-		flex: 0 0 0px;
-		visibility: hidden;
-		display: none;
-	}
-}
-
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -357,11 +318,12 @@ footer {
 }
 
 .nav-arrow.left {
-    margin-right: auto;
+    align-self: flex-start; /* Align to the left */
 }
 
 .nav-arrow.right {
-    margin-left: auto;
+    align-self: flex-end; /* Align to the right */
+    margin-left: auto; /* Push to the far right */
 }
 
 .nav-arrow:hover {

@@ -36,32 +36,3 @@ O(n)
 ## Space Complexity
 O(1)
 > Does not occupy any memory
-
-<style>
-.hover-container {
-    position: relative;
-    display: inline-block;
-}
-
-.info-box {
-    visibility: hidden;
-    width: 200px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; /* Position above the hover element */
-    left: 50%;
-    margin-left: -100px; /* Center the box */
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.hover-container:hover .info-box {
-    visibility: visible;
-    opacity: 1;
-}
-</style>

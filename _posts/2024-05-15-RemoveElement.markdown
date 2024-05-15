@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Merge Sorted Array
+title: Remove Element
 date: 2024-05-15 10:33:00 +0900
 categories: leetcode python
 ---
 ## Problem
-![alt text]()
+![alt text](/blog/public/img/RemoveElement.png)
 
 ## Approach
 

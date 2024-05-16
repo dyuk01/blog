@@ -8,7 +8,7 @@ categories: leetcode String/Array python
 ![alt text](/blog/public/img/RemoveDuplicatesfromSortedArray.png)
 
 ## Approach
-Similar to Remove Element problem, but the difference is that specific value is not given  
+This problem is similar to <a href="https://dyuk01.github.io/blog/leetcode/string/array/python/2024/05/15/RemoveElement.html">Remove Element</a> problem, but the difference is that specific value is not given  
 since its goal is to find the duplicates.
 
 0. Since the list is in increasing (non-decreasing) order, there is no need to order the list.  

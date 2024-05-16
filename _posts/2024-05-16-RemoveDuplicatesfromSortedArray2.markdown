@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Remove Duplicates from Sorted Array
+title: Remove Duplicates from Sorted Array - 2
 date: 2024-05-16
 categories: leetcode String/Array python
 ---
 ## Problem
-![alt text](/blog/public/img/RemoveDuplicatesfromSortedArray.png)
+![alt text](/blog/public/img/RemoveDuplicatesfromSortedArray2.png)
 
 ## Approach
-This problem is similar to <a href="https://dyuk01.github.io/blog/leetcode/string/array/python/2024/05/15/RemoveElement.html">Remove Element</a> problem, but the difference is that specific value is not given  
-since its goal is to find the duplicates.
+This problem is harder version of <a href="https://dyuk01.github.io/blog/leetcode/string/array/python/2024/05/16/RemoveDuplicatesfromSortedArray.html">Remove Duplicates from Sorted Array</a> problem, but the difference is that duplicates can be included in the array up to two times.  
+In this case, we need to add few if statements to determine two duplicates.
 
 0. Since the list is in increasing (non-decreasing) order, there is no need to order the list.  
 This means that we can safely initialize index to 0 and become the starting point.
@@ -26,14 +26,24 @@ we need to adjust the for loop to iterate from the second element to the end
 class Solution(object):
     def removeDuplicates(self, nums):
         index = 0
+        count = 0
         # Iterate the array from 2nd to end 
-        for i in range(1, len(nums)) :
-            # If the next element is not the duplicate, increment the index and add it to the array 
+        for i in range(1, len(nums)) : 
+            # If the next element is the duplicate, increment the count
+            if nums[i] == nums[index] : 
+                count += 1
+            # If the next element is not the duplicate, reset count
             if nums[i] != nums[index] :
-                index += 1
-                nums[index] = nums[i]
+                count = 0
+            # If count is more than one, skip adding to the array
+            if count > 1 :
+                continue
+            # Add the element to the array and increment index
+            index += 1
+            nums[index] = nums[i]
         # Return the number of elements in the array including the initial element
         return index + 1
+        
 ```
 ## Time Complexity
 O(n)

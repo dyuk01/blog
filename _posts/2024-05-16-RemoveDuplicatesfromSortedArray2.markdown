@@ -35,7 +35,7 @@ class Solution(object):
             # If the next element is not the duplicate, reset count
             if nums[i] != nums[index] :
                 count = 0
-            # If count is more than one, skip adding to the array
+            # If there is more than one duplicate, skip adding to the array
             if count > 1 :
                 continue
             # Add the element to the array and increment index

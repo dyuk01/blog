@@ -36,7 +36,7 @@ However, this method also did not pass the cases. Although the time complexity w
 I assumed that the problem was looking for O(n) since there was a case with large array and k.  
 
 I was lost at first, but soon realized how it works after looking at the solution.  
-![alt text](/blog/public/img/RotateArraySolution.png)  
+![alt text](/blog/public/img/RotateArrayExplanation.png)  
 0. First, make a reverse function
 1. Initialize a pivot function
 2. Reverse the whole array

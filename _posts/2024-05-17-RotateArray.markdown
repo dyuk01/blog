@@ -33,8 +33,8 @@ However, this method also did not pass the cases. Although the time complexity w
 I assumed that the problem was looking for O(n) since there was a case with large array and k.  
 
 I was lost at first, but soon realized how it works after looking at the solution.  
-![alt text](/blog/public/img/RotateArrayExplanation.png)
-Although the order that I understood does not exactly match the image,    
+![alt text](/blog/public/img/RotateArrayExplanation.png)  
+Although the order that I understood does not exactly match with the image, I structued my code based on this explanation.    
 ## Approach
 0. First, make a reverse function
 1. Initialize a pivot function

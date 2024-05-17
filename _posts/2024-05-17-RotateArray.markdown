@@ -36,11 +36,11 @@ I was lost at first, but soon realized how it works after looking at the solutio
 ![alt text](/blog/public/img/RotateArrayExplanation.png)  
 Although the order that I understood does not exactly match with the image, I structued my code based on this explanation.    
 ## Approach
-0. First, make a reverse function
-1. Initialize a pivot function
-2. Reverse the whole array
-3. Reverse the left side of the array
-4. Reverse the right side of the array  
+1. First, make a reverse function
+2. Initialize a pivot function
+3. Reverse the whole array
+4. Reverse the left side of the array
+5. Reverse the right side of the array  
 
 ```python
 class Solution(object):

@@ -8,11 +8,9 @@ categories: leetcode String/Array python easy
 ![alt text](/blog/public/img/BuyStock.png)
 
 ## Approach
-This may seem like finding the max value, but the fact that  
-we cannot sell before buying makes this problem difficult.
+This may seem like finding the max value, but the fact that we cannot sell before buying makes this problem difficult.
 
-1. Initialize buying and selling variable to 0 and 1  
-to ensure we don't sell before buying the stock
+1. Initialize buying and selling variable to 0 and 1 to ensure we don't sell before buying the stock
 2. By initializing two values (current and max profit), we can always acquire the  
 max value for each iteration.
 

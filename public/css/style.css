@@ -326,18 +326,6 @@ footer {
     border-color: #ccc;
 }
 
-.nav-icon {
-    font-size: 24px;
-    color: #28a745; /* Green color */
-    margin-right: 10px;
-}
-
-.nav-button.previous .nav-icon {
-    order: 1; /* Position icon to the left */
-    margin-right: 0;
-    margin-left: 20px;
-}
-
 .nav-text {
     display: flex;
     flex-direction: column;

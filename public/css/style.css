@@ -342,7 +342,4 @@ footer {
     font-weight: bold;
     color: #333;
     max-width: 300px; /* Adjust width as needed */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }

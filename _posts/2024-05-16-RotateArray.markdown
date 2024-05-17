@@ -36,8 +36,35 @@ However, this method also did not pass the cases. Although the time complexity w
 I assumed that the problem was looking for O(n) since there was a case with large array and k.  
 
 I was lost at first, but soon realized how it works after looking at the solution.  
-![alt text](/blog/public/img/RotateArraySolution.png)
+![alt text](/blog/public/img/RotateArraySolution.png)  
+0. First, make a reverse function
+1. Initialize a pivot function
+2. Reverse the whole array
+3. Reverse the left side of the array
+4. Reverse the right side of the array  
 
+```python
+class Solution(object):
+    def reverse(self, nums, start, end) :
+        # Stop when the array is fully reversed
+        while start < end :
+            # Makes a storage to store the array's initial element
+            temp = nums[start]
+            # Replaces end with beginning and increment the counters
+            nums[start] = nums[end]
+            nums[end] = temp
+            start += 1
+            end -= 1
+    def rotate(self, nums, k):
+        # Makes a pivot
+        k %= len(nums)
+        # Reverse the whole array
+        self.reverse(nums, 0, len(nums) - 1)
+        # Reverse the left side of the array
+        self.reverse(nums, 0, k-1)
+        # Reverse the right side of the array
+        self.reverse(nums, k, len(nums) - 1)
+```
 ## Time Complexity
 O(n)
 

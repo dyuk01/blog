@@ -67,6 +67,7 @@ class Solution(object):
 ```
 ## Time Complexity
 O(n)
-
+> O(n) + O(k) + O(m-k), which reduces to O(n)
 ## Space Complexity
 O(1)
+> Performs without extra space

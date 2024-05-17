@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bubble Sort
+title: Quick Sort
 date: 2024-05-17
 categories: algorithm python
 ---

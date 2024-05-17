@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Remove Duplicates from Sorted Array - 2
-date: 2024-05-16
-categories: leetcode String/Array python medium
+title: Best Time to Buy and Sell Stock
+date: 2024-05-17
+categories: leetcode String/Array python easy
 ---
 ## Problem
-![alt text](/blog/public/img/RemoveDuplicatesfromSortedArray2.png)
+![alt text](/blog/public/img/BuyStock.png)
 
 ## Approach
 This problem is harder version of <a href="https://dyuk01.github.io/blog/leetcode/string/array/python/2024/05/16/RemoveDuplicatesfromSortedArray.html">Remove Duplicates from Sorted Array</a> problem, but the difference is that one duplicate can be included in the array.  
@@ -24,30 +24,22 @@ we need to adjust the for loop to iterate from the second element to the end
 ## Code
 ```python
 class Solution(object):
-    def removeDuplicates(self, nums):
-        index = 0
-        count = 0
-        # Iterate the array from 2nd to end 
-        for i in range(1, len(nums)) : 
-            # If the next element is the duplicate, increment the count
-            if nums[i] == nums[index] : 
-                count += 1
-            # If the next element is not the duplicate, reset count
-            if nums[i] != nums[index] :
-                count = 0
-            # If there is more than one duplicate, skip adding to the array
-            if count > 1 :
-                continue
-            # Add the element to the array and increment index
-            index += 1
-            nums[index] = nums[i]
-        # Return the number of elements in the array including the initial element
-        return index + 1
-        
+    def maxProfit(self, prices):
+        left = 0
+        right = 1
+        max_profit = 0
+        while right < len(prices) :
+            curr_profit = prices[right] - prices[left]
+            if prices[left] < prices[right] :
+                max_profit = max(curr_profit, max_profit)
+            else :
+                left = right
+            right += 1
+        return max_profit
 ```
 ## Time Complexity
 O(n)
-> Iterates through the array once 
+> Loop runs n times
 
 ## Space Complexity
 O(1)

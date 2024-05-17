@@ -27,7 +27,6 @@
             <div class="navigation-buttons">
                 {% if page.previous %}
                 <a href="{{ page.previous.url | relative_url }}" class="nav-button previous">
-                    <div class="nav-icon">&#x2190;</div>
                     <div class="nav-text">
                         <span class="nav-label">Previous Post</span>
                         <span class="nav-title">{{ page.previous.title | escape }}</span>
@@ -40,7 +39,6 @@
                         <span class="nav-label">Next Post</span>
                         <span class="nav-title">{{ page.next.title | escape }}</span>
                     </div>
-                    <div class="nav-icon">&#x2192;</div>
                 </a>
                 {% endif %}
             </div>

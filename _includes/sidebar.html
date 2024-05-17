@@ -1,52 +1,93 @@
 <div class="sidebar-item sidebar-header">
-	<div class='sidebar-brand'>
-		<a href="/blog/about/">{{ site.title }}</a>
-	</div>
-	<p class="lead">{{ site.description }}</p>
-	{%- if social.github -%}
-		<a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}">
-			<svg class="svg-icon grey">
-				<use xlink:href="{{ '/blog/assets/minima-social-icons.svg#github' | relative_url }}" />
-			</svg></a></li>
-	{%- endif -%}
+    <div class='sidebar-brand'>
+        <a href="/blog/about/">{{ site.title }}</a>
+    </div>
+    <p class="lead">{{ site.description }}</p>
+    {%- if social.github -%}
+        <a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}">
+            <svg class="svg-icon grey">
+                <use xlink:href="{{ '/blog/assets/minima-social-icons.svg#github' | relative_url }}" />
+            </svg></a></li>
+    {%- endif -%}
 </div>
 
 <div class="sidebar-item sidebar-nav">
-	<ul class="nav">
-      <li class="nav-title">Pages</li>
-	  <li>
-	  	<a class="nav-item" href="/blog/">Articles</a>
-	  </li>
-	  {% assign pages_list = site.pages %}
-	  {% for node in pages_list %}
-	    {% if node.title != null %}
-	      {% if node.layout == "page" %}
-	        <li>
-	        	<a class="nav-item" href="/blog{{ node.url }}">
-	            	{{ node.title }}
-	            </a>
-	        </li>
-	      {% endif %}
-	    {% endif %}
-	  {% endfor %}
-	</ul>
+    <ul class="nav">
+        <li class="nav-title">Pages</li>
+        <li>
+            <a class="nav-item" href="/blog/">Articles</a>
+        </li>
+        {% assign pages_list = site.pages %}
+        {% for node in pages_list %}
+            {% if node.title != null %}
+                {% if node.layout == "page" %}
+                    <li>
+                        <a class="nav-item" href="/blog{{ node.url }}">
+                            {{ node.title }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </ul>
 </div>
 
 <div class="sidebar-item sidebar-nav">
-  	<ul class="nav">
-			<li class="nav-title">Categories</li>
-	    {% for category in site.categories %}
-	    <li>
-	    	<a class="nav-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}">
-				<span class="name">{{ category | first }}</span>
-				<span class="badge">{{ category | last | size }}</span>
-	    	</a>
- 		</li>
-	    {% endfor %}
-	  </nav>
-	</ul>
+    <ul class="nav">
+        <li class="nav-title">Categories</li>
+        {% for category in site.categories %}
+            <li>
+                <a class="nav-item category-link" href="javascript:void(0)" data-category="{{ category | first }}">
+                    <span class="name">{{ category | first }}</span>
+                    <span class="badge">{{ category | last | size }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 </div>
 
 <div class="sidebar-item sidebar-footer">
-	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+    <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
 </div>
+
+<script src="/blog/public/js/jquery-3.4.1.slim.min.js"></script>
+<script>
+    function updateCategoryHash(category) {
+        let hash = window.location.hash.substring(1).split(',').map(cat => cat.trim()).filter(cat => cat);
+        if (hash.includes(category)) {
+            hash = hash.filter(cat => cat !== category);
+        } else {
+            hash.push(category);
+        }
+        window.location.hash = hash.join(',');
+    }
+
+    function removeCategory() {
+        if (window.location.hash) {
+            let hash = window.location.hash.substring(1).split(',');
+            let formattedCategories = hash.map(category => category.trim().charAt(0).toUpperCase() + category.trim().slice(1)).join(', ');
+            $('#category-name').text(formattedCategories);
+            $('.post-list-item').each((i, e) => {
+                let hasCategory = hash.some(category => $(e).hasClass('post-category-' + category.trim()));
+                if (!hasCategory) {
+                    $(e).hide();
+                } else {
+                    $(e).show();
+                }
+            });
+        }
+    }
+
+    $(document).on('click', '.category-link', function() {
+        let category = $(this).data('category');
+        updateCategoryHash(category);
+    });
+
+    $(window).on('hashchange', () => {
+        removeCategory();
+    });
+
+    $(document).ready(() => {
+        removeCategory();
+    });
+</script>

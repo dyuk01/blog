@@ -34,7 +34,7 @@ I assumed that the problem was looking for O(n) since there was a case with larg
 
 I was lost at first, but soon realized how it works after looking at the solution.  
 ![alt text](/blog/public/img/RotateArrayExplanation.png)
-
+Although the order is not exactly in order,  
 ## Approach
 0. First, make a reverse function
 1. Initialize a pivot function

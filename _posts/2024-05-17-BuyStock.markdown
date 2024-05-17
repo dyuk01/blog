@@ -35,6 +35,7 @@ class Solution(object):
             else :
                 # Move buy element to the next element
                 left = right
+            # Move the selling day by 1
             right += 1
         return max_profit
 ```

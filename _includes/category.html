@@ -1,69 +1,47 @@
 <article class="post">
-    <header class="post-header home">
-        <div class="post-title">Category - <span id='category-name'></span></div>
-    </header>
+	<header class="post-header home">
+		<div class="post-title">Category - <span id='category-name'></span></div>
+	</header>
 
-    <div class="post-content">
-        {%- if site.posts.size > 0 -%}
-        <ul class="post-list">
-            {%- for post in site.posts -%}
-            <li class="post-list-item {% for category in post.categories %} post-category-{{ category }}{% endfor %}">
-                {%- assign date_format = "%m/%d/%Y" -%}
-                <span class="post-date">{{ post.date | date: date_format }}</span>
-                <a class="post-link" href="{{ post.url | relative_url }}">
-                    {{ post.title | escape }}
-                </a>
-                {%- if site.show_excerpts -%}{{ post.excerpt }}{%- endif -%}
-                <div class="categories">
-                    {%- for category in post.categories -%}
-                    <a href="javascript:void(0)" class="category-link" data-category="{{ category }}">{{ category }}</a>
-                    {%- endfor -%}
-                </div>
-            </li>
-            {%- endfor -%}
-        </ul>
-        {%- endif -%}
-    </div>
+	<div class="post-content">
+		{%- if site.posts.size > 0 -%}
+		<ul class="post-list">
+			{%- for post in site.posts -%}
+			<li class="post-list-item {% for category in post.categories %} post-category-{{ category }}{% endfor %}">
+				{%- assign date_format = "%m/%d/%Y" -%}
+				<span class="post-date">{{ post.date | date: date_format }}</span>
+				<a class="post-link" href="{{ post.url | relative_url }}">
+					{{ post.title | escape }}
+				</a>
+				{%- if site.show_excerpts -%}{{ post.excerpt }}{%- endif -%}
+			</li>
+		  	{%- endfor -%}
+		</ul>
+	  	{%- endif -%}
+	</div>
 </article>
 
 <script src="/blog/public/js/jquery-3.4.1.slim.min.js"></script>
 <script>
-    function updateCategoryHash(category) {
-        let hash = window.location.hash.substring(1).split(',').map(cat => cat.trim()).filter(cat => cat);
-        if (hash.includes(category)) {
-            hash = hash.filter(cat => cat !== category);
-        } else {
-            hash.push(category);
-        }
-        window.location.hash = hash.join(',');
-    }
-
-    function removeCategory() {
-        if (window.location.hash) {
-            let hash = window.location.hash.substring(1).split(',');
-            let formattedCategories = hash.map(category => category.trim().charAt(0).toUpperCase() + category.trim().slice(1)).join(', ');
-            $('#category-name').text(formattedCategories);
-            $('.post-list-item').each((i, e) => {
-                let hasCategory = hash.some(category => $(e).hasClass('post-category-' + category.trim()));
-                if (!hasCategory) {
-                    $(e).hide();
-                } else {
-                    $(e).show();
-                }
-            });
-        }
-    }
-
-    $(document).on('click', '.category-link', function() {
-        let category = $(this).data('category');
-        updateCategoryHash(category);
-    });
-
-    $(window).on('hashchange', () => {
-        removeCategory();
-    });
-
-    $(document).ready(() => {
-        removeCategory();
-    });
+	function removeCategory() {
+		if (window.location.hash) {
+			let hash = window.location.hash.substring(1).split(',');
+			let formattedCategories = hash.map(category => category.trim().charAt(0).toUpperCase() + category.trim().slice(1)).join(', ');
+			$('#category-name').text(formattedCategories);
+			$('.post-list-item').each((i, e) => {
+				let hasCategory = hash.some(category => $(e).hasClass('post-category-' + category.trim()));
+				if (!hasCategory) {
+					$(e).hide();
+				} else {
+					$(e).show();
+				}
+			});
+		}
+	}
+	$(window).on('hashchange', () => {
+		removeCategory();
+	});
+	$(document).ready(() => {
+		removeCategory();	
+	});
 </script>

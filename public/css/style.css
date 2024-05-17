@@ -304,9 +304,9 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
+    padding: 30px;
+    background-color: #c6c6c6;
+    border-radius: 20px;
 }
 
 .nav-button {
@@ -325,6 +325,7 @@ footer {
     background-color: #f0f0f0;
     border-color: #ccc;
 }
+
 
 .nav-text {
     display: flex;

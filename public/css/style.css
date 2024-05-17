@@ -335,7 +335,7 @@ footer {
 .nav-button.previous .nav-icon {
     order: 1; /* Position icon to the left */
     margin-right: 0;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .nav-text {

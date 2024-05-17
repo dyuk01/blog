@@ -304,9 +304,9 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    padding: 30px;
-    background-color: #c6c6c6;
-    border-radius: 20px;
+    padding: 20px;
+    background-color: #d4d4d4;
+    border-radius: 10px;
 }
 
 .nav-button {
@@ -342,7 +342,7 @@ footer {
     font-size: 16px;
     font-weight: bold;
     color: #333;
-    max-width: 200px; /* Adjust width as needed */
+    max-width: 300px; /* Adjust width as needed */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

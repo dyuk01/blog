@@ -305,7 +305,7 @@ footer {
     justify-content: space-between;
     margin-top: 40px;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     border-radius: 10px;
 }
 
@@ -316,7 +316,7 @@ footer {
     color: #333;
     padding: 10px;
     background-color: #fff;
-    border: 1px solid #fff; /* Adjust this value for different thickness */
+    border: 1px solid #e0e0e0; /* Adjust this value for different thickness */
     border-radius: 10px;
     transition: background-color 0.3s, border-color 0.3s;
 }

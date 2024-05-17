@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Insertion Sort Algorithm
-date: 2024-05-16
+title: Bubble Sort
+date: 2024-05-17
 categories: algorithm python
 ---
 ## Problem

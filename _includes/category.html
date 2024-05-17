@@ -1,52 +1,48 @@
 <article class="post">
-    <header class="post-header home">
-        <div class="post-title">Category - <span id='category-name'></span></div>
-    </header>
+	<header class="post-header home">
+		<div class="post-title">Category - <span id='category-name'></span></div>
+	</header>
 
-    <div class="post-content">
-        {%- if site.posts.size > 0 -%}
-        <ul class="post-list">
-            {%- for post in site.posts -%}
-            <li class="post-list-item {% for category in post.categories %} post-category-{{ category | slugify }}{% endfor %}">
-                {%- assign date_format = "%m/%d/%Y" -%}
-                <span class="post-date">{{ post.date | date: date_format }}</span>
-                <a class="post-link" href="{{ post.url | relative_url }}">
-                    {{ post.title | escape }}
-                </a>
-                {%- if site.show_excerpts -%}{{ post.excerpt }}{%- endif -%}
-                <div class="categories">
-                    {%- for category in post.categories -%}
-                    <a href="{{ site.baseurl }}/categories#{{ category | slugify }}">{{ category }}</a>
-                    {%- endfor -%}
-                </div>
-            </li>
-            {%- endfor -%}
-        </ul>
-        {%- endif -%}
-    </div>
+	<div class="post-content">
+		{%- if site.posts.size > 0 -%}
+		<ul class="post-list">
+			{%- for post in site.posts -%}
+			<li class="post-list-item post-category-{{post.categories}}">
+				<!-- {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%} -->
+				{%- assign date_format = "%m/%d/%Y" -%}
+				<span class="post-date">{{ post.date | date: date_format }}</span>
+				<a class="post-link" href="{{ post.url | relative_url }}">
+					{{ post.title | escape }}
+				</a>
+				{%- if site.show_excerpts -%}{{ post.excerpt }}{%- endif -%}
+			</li>
+		  	{%- endfor -%}
+		</ul>
+	  	{%- endif -%}
+	</div>
 </article>
 
 <script src="/blog/public/js/jquery-3.4.1.slim.min.js"></script>
 <script>
-    function removeCategory() {
-        if (window.location.hash) {
-            let hash = window.location.hash.substring(1).split(',');
-            let formattedCategories = hash.map(category => category.trim().charAt(0).toUpperCase() + category.trim().slice(1)).join(', ');
-            $('#category-name').text(formattedCategories);
-            $('.post-list-item').each((i, e) => {
-                let hasCategory = hash.some(category => $(e).hasClass('post-category-' + category.trim().toLowerCase().replace(/ /g, '-')));
-                if (!hasCategory) {
-                    $(e).hide();
-                } else {
-                    $(e).show();
-                }
-            });
-        }
-    }
-    $(window).on('hashchange', () => {
-        removeCategory();
-    });
-    $(document).ready(() => {
-        removeCategory();    
-    });
+	function removeCategory() {
+		if (window.location.hash) {
+			let hash = window.location.hash.substring(1);
+			$('#category-name').text(hash.substring(0, 1).toUpperCase() + hash.substring(1));
+			let category_class = '.post-category-' + hash;
+			let items = $('.post-list-item').each((i, e) => {
+				if (!$(e).hasClass('post-category-' + hash)) {
+					$(e).hide();
+				} else {
+					$(e).show();
+				}
+			});
+		}
+	}
+	$(window).on('hashchange', () => {
+		removeCategory();
+	});
+	$(document).ready(() => {
+		removeCategory();	
+	})
+	
 </script>

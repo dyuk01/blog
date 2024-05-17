@@ -34,27 +34,19 @@
 
 <div class="sidebar-item sidebar-nav">
   	<ul class="nav">
-        <li class="nav-title">Categories</li>
-        {%- assign categories = site.categories | group_by: "first" -%}
-        {% for category in categories %}
-            <li>
-                <a class="nav-item" href="{{ site.baseurl }}/categories#{{ category.name | slugify }}">
-                    <span class="name">{{ category.name }}</span>
-                    <span class="badge">{{ category.items | size }}</span>
-                </a>
-                <ul>
-                    {% assign subcategories = category.items | map: "categories" | flatten | uniq %}
-                    {% for subcategory in subcategories %}
-                        {% if subcategory != category.name %}
-                            <li>
-                                <a class="nav-item" href="{{ site.baseurl }}/categories#{{ subcategory | slugify }}">
-                                    <span class="name">{{ subcategory }}</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            </li>
-        {% endfor %}
+			<li class="nav-title">Categories</li>
+	    {% for category in site.categories %}
+	    <li>
+	    	<a class="nav-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}">
+				<span class="name">{{ category | first }}</span>
+				<span class="badge">{{ category | last | size }}</span>
+	    	</a>
+ 		</li>
+	    {% endfor %}
+	  </nav>
 	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
 </div>

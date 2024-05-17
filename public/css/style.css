@@ -316,7 +316,7 @@ footer {
     color: #333;
     padding: 10px;
     background-color: #fff;
-    border: 2px solid #e0e0e0; /* Adjust this value for different thickness */
+    border: 1px solid #e0e0e0; /* Adjust this value for different thickness */
     border-radius: 10px;
     transition: background-color 0.3s, border-color 0.3s;
 }

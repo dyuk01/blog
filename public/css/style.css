@@ -310,13 +310,13 @@ footer {
 }
 
 .nav-button {
-    display: flex;
+	display: flex;
     align-items: center;
     text-decoration: none;
     color: #333;
     padding: 10px;
     background-color: #fff;
-    border: 20px solid #e0e0e020;
+    border: 2px solid #e0e0e0; /* Adjust this value for different thickness */
     border-radius: 10px;
     transition: background-color 0.3s, border-color 0.3s;
 }
@@ -324,18 +324,6 @@ footer {
 .nav-button:hover {
     background-color: #f0f0f0;
     border-color: #ccc;
-}
-
-.nav-icon {
-    font-size: 24px;
-    color: #28a745; /* Green color */
-    margin-right: 10px;
-}
-
-.nav-button.previous .nav-icon {
-    order: 1; /* Position icon to the left */
-    margin-right: 0;
-    margin-left: 10px;
 }
 
 .nav-text {

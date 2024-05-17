@@ -7,9 +7,6 @@ categories: leetcode String/Array python
 ## Problem
 ![alt text](/blog/public/img/RotateArray.png)
 
-## Approach
-
-
 ## Code
 My initial approach was to have nested for loop like below,
 ```python
@@ -36,7 +33,9 @@ However, this method also did not pass the cases. Although the time complexity w
 I assumed that the problem was looking for O(n) since there was a case with large array and k.  
 
 I was lost at first, but soon realized how it works after looking at the solution.  
-![alt text](/blog/public/img/RotateArrayExplanation.png)  
+![alt text](/blog/public/img/RotateArrayExplanation.png)
+
+## Approach
 0. First, make a reverse function
 1. Initialize a pivot function
 2. Reverse the whole array
@@ -56,7 +55,7 @@ class Solution(object):
             start += 1
             end -= 1
     def rotate(self, nums, k):
-        # Makes a pivot
+        # Make a pivot
         k %= len(nums)
         # Reverse the whole array
         self.reverse(nums, 0, len(nums) - 1)
@@ -67,7 +66,7 @@ class Solution(object):
 ```
 ## Time Complexity
 O(n)
-> O(n) + O(k) + O(m-k), which reduces to O(n)
+> O(n) + O(k) + O(n-k), which reduces to O(n)
 ## Space Complexity
 O(1)
 > Performs without extra space

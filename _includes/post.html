@@ -24,12 +24,24 @@
         </div>
 
         <footer class="post-footer">
-            <div class="navigation">
+            <div class="navigation-buttons">
                 {% if page.previous %}
-                    <a href="{{ page.previous.url | relative_url }}" class="nav-arrow left">&larr; Previous</a>
+                <a href="{{ page.previous.url | relative_url }}" class="nav-button previous">
+                    <div class="nav-icon">&#x2190;</div>
+                    <div class="nav-text">
+                        <span class="nav-label">Previous Post</span>
+                        <span class="nav-title">{{ page.previous.title | escape }}</span>
+                    </div>
+                </a>
                 {% endif %}
                 {% if page.next %}
-                    <a href="{{ page.next.url | relative_url }}" class="nav-arrow right">Next &rarr;</a>
+                <a href="{{ page.next.url | relative_url }}" class="nav-button next">
+                    <div class="nav-text">
+                        <span class="nav-label">Next Post</span>
+                        <span class="nav-title">{{ page.next.title | escape }}</span>
+                    </div>
+                    <div class="nav-icon">&#x2192;</div>
+                </a>
                 {% endif %}
             </div>
         </footer>

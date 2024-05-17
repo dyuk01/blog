@@ -2,7 +2,7 @@
 layout: post
 title: Remove Element
 date: 2024-05-15
-categories: leetcode String/Array python
+categories: leetcode String/Array python easy
 ---
 ## Problem
 ![alt text](/blog/public/img/RemoveElement.png)

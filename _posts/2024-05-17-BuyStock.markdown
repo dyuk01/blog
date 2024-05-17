@@ -8,31 +8,34 @@ categories: leetcode String/Array python easy
 ![alt text](/blog/public/img/BuyStock.png)
 
 ## Approach
-This problem is harder version of <a href="https://dyuk01.github.io/blog/leetcode/string/array/python/2024/05/16/RemoveDuplicatesfromSortedArray.html">Remove Duplicates from Sorted Array</a> problem, but the difference is that one duplicate can be included in the array.  
-In this case, we need to add few if statements to determine if the elements are duplicates.
+This may seem like finding the max value, but the fact that  
+we cannot sell before buying makes this problem difficult.
 
-0. Since the list is in increasing (non-decreasing) order, there is no need to order the list.  
-This means that we can safely initialize index to 0 and become the starting point.
-1. Because we are going to have index as our first element,  
-we need to adjust the for loop to iterate from the second element to the end
-2. Operate the following procedure while iterating through the array:
-- If the current value is not the duplicate: 
-- Increment index by 1
-- Replace the non-duplicate element to the array
-3. Return index incremented by 1 since we need to consider our first element in the array as well.
+1. Initialize buying and selling variable to 0 and 1  
+to ensure we don't sell before buying the stock
+2. By initializing two values (current and max profit), we can always acquire the  
+max value for each iteration.
 
 ## Code
 ```python
 class Solution(object):
     def maxProfit(self, prices):
+        # Buy
         left = 0
+        # Sell
         right = 1
+        # Return value
         max_profit = 0
+        # Prevent Out of bound
         while right < len(prices) :
+            # Current value to compare with max_profit
             curr_profit = prices[right] - prices[left]
+            # Ensure we don't sell before buying
             if prices[left] < prices[right] :
+                # Find the max profit
                 max_profit = max(curr_profit, max_profit)
             else :
+                # Move buy element to the next element
                 left = right
             right += 1
         return max_profit

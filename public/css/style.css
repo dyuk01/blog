@@ -316,7 +316,7 @@ footer {
     color: #333;
     padding: 10px;
     background-color: #fff;
-    border: 2px solid #e0e0e0e1;
+    border: 1px solid #e0e0e0;
     border-radius: 10px;
     transition: background-color 0.3s, border-color 0.3s;
 }
@@ -326,6 +326,17 @@ footer {
     border-color: #ccc;
 }
 
+.nav-icon {
+    font-size: 24px;
+    color: #28a745; /* Green color */
+    margin-right: 10px;
+}
+
+.nav-button.previous .nav-icon {
+    order: 1; /* Position icon to the left */
+    margin-right: 0;
+    margin-left: 10px;
+}
 
 .nav-text {
     display: flex;
@@ -342,7 +353,7 @@ footer {
     font-size: 16px;
     font-weight: bold;
     color: #333;
-    max-width: 300px; /* Adjust width as needed */
+    max-width: 200px; /* Adjust width as needed */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

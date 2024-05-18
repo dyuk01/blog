@@ -10,16 +10,21 @@ categories: leetcode String/Array python medium
 ## Approach
 Complicated version of <a href="https://dyuk01.github.io/blog/leetcode/string/array/python/easy/2024/05/17/BuyStock.html">Best Time to Buy and Sell Stock</a> problem, but the difference is the problem is asking for the maximum profit, which indicates that a user can buy and sell multiple times to find the highest profit that one can get.  
 
-1. Initialize
+1. Initialize the sum
+2. Although the problem asks to maximize the profit, we only have to consider the consecutive elements
+3. Iterate through the array and find the maximum profit by adding consecutive profits
 
 ## Code
 ```python
 class Solution(object):
     def maxProfit(self, prices):
         sum = 0
+        # Iterate through the array until second last index
         for i in range(len(prices)-1) :
+            # If the next index's element is greater, add the profit to the sum
             if (prices[i] < prices[i+1]) :
-                sum = sum + prices[i+1] - prices[i]
+                sum += prices[i+1] - prices[i]
+        # Return the maximum profit
         return sum 
 ```
 ## Time Complexity

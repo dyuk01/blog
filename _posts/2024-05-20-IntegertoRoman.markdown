@@ -8,7 +8,7 @@ categories: leetcode String/Array python medium
 ![alt text](/blog/public/img/IntegertoRoman.png)
 
 ## Approach
-This problem is a reversed <a href="https://dyuk01.github.io/blog/leetcode/string/array/python/easy/2024/05/17/BuyStock.html">Roman to Integer</a> problem, where I have to return a string of Roman Integers after the number input.  
+This problem is a reversed <a href="https://dyuk01.github.io/blog/leetcode/string/array/python/easy/2024/05/20/RomanToIntger.html">Roman to Integer</a> problem, where I have to return a string of Roman Integers after the number input.  
   
 This is a brute-force algorithm that checks every possible value for an int to be translated into roman numerals.  
 

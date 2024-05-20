@@ -18,7 +18,14 @@ This is a brute-force algorithm that checks every possible value for an int to b
 ```python
 class Solution:
     def intToRoman(self, num: int):
+        # Create an empty array to store Roman numerals
         s = ""
+        '''
+        Brute-force through the integer and convert them into Roman numerals
+        Checks for 5 and 10s, also special cases(4 and 9s)
+        If the algorithm finds the number that it's looking for, add the character
+        to the array and subtract the equivalent amount from the number
+        '''
         while num >= 1000:
             s += "M"
             num -= 1000

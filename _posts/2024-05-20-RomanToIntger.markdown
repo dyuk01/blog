@@ -27,7 +27,6 @@ class Solution(object):
             "D" : 500,
             "M" : 1000
         }
-
         number = 0
         # Replacing all the 4 and 9s into readable characters
         s = s.replace("IV", "IIII").replace("IX", "VIIII")

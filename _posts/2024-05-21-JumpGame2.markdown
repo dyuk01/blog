@@ -8,11 +8,9 @@ categories: leetcode String/Array python medium
 ![alt text](/blog/public/img/JumpGame2.png)
 
 ## Approach
-The goal is to find the minimum amount of jumps required to reach the end.  
-By updating last position and max distance seperately, it allows us to keep track  
-of minimum jups required. This algorithm is categorized as greedy BFS because  
-the algorithm always trys to jump to the maximum distance, and considers  
-every possible jumps that one can make.  
+The goal is to find the minimum amount of jumps required to reach the end. By updating last position and max distance seperately,  
+it allows us to keep track of minimum jups required. This algorithm is categorized as greedy BFS because  
+the algorithm always trys to jump to the maximum distance, and considers every possible jumps that one can make.  
 
 1. Check if the jump reached the end
 2. Find the maximum distance to jump

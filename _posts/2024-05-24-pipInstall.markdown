@@ -8,7 +8,7 @@ categories: installation
 
 ## Procedure
 1. In order to utilize pip, you need to download python3. Type the code below to check if you have python. If not, download <a href="https://www.python.org/downloads/" target="_blank">Python</a> and follow step 2.
-```cmd
+```command
 python3 --version
 ```
 2. 

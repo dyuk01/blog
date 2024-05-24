@@ -1,0 +1,49 @@
+---
+layout: post
+title: Best Time to Buy and Sell Stock
+date: 2024-05-17
+categories: leetcode String/Array python easy
+---
+## Problem
+![alt text](/blog/public/img/BuyStock.png)
+
+## Approach
+This may seem like finding the max value, but the fact that we cannot sell before buying makes this problem difficult.
+
+1. Initialize buying and selling variable to 0 and 1 to  
+ensure we don't sell before buying the stock
+2. By initializing two values (current and max profit),  
+we can always acquire the max value for each iteration.
+
+## Code
+```python
+class Solution(object):
+    def maxProfit(self, prices):
+        # Buy
+        left = 0
+        # Sell
+        right = 1
+        # Return value
+        max_profit = 0
+        # Prevent Out of bound
+        while right < len(prices) :
+            # Current value to compare with max_profit
+            curr_profit = prices[right] - prices[left]
+            # Ensure we don't sell before buying
+            if prices[left] < prices[right] :
+                # Find the max profit
+                max_profit = max(curr_profit, max_profit)
+            else :
+                # Move buy element to the next element
+                left = right
+            # Move the selling day by 1
+            right += 1
+        return max_profit
+```
+## Time Complexity
+O(n)
+> Loop runs n times
+
+## Space Complexity
+O(1)
+> Constant amount of extra space is used

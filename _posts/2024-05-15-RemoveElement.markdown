@@ -35,4 +35,4 @@ O(n)
 
 ## Space Complexity
 O(1)
-> Does not occupy any memory
+> Constant amount of extra space is used

@@ -6,7 +6,7 @@ permalink: /about/
 
 ## 육도경 | Dokyung Yuk
 > Computer Science student learning about Software Engineering.  
-> This is a blog to record what I have learned from studying CS.
+> This is a blog to record what I have learned from studying any kind of technology.
 
 - <a href="https://github.com/dyuk01">Github</a>
 - <a href="https://dyuk01.github.io/main/">Portfolio</a>

@@ -298,34 +298,50 @@ footer {
 	color: #ccc;
 }
 
+/* assets/css/styles.css */
 
-.navigation {
+.navigation-buttons {
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
     padding: 20px;
-    background-color: #f8f9fa;
-    margin-top: 20px;
-    border-top: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
-.nav-arrow {
+.nav-button {
+	display: flex;
+    align-items: center;
     text-decoration: none;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    color: #333;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0; /* Adjust this value for different thickness */
+    border-radius: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-.nav-arrow.left {
-    align-self: flex-start; /* Align to the left */
+.nav-button:hover {
+    border-color: #ccc;
 }
 
-.nav-arrow.right {
-    align-self: flex-end; /* Align to the right */
-    margin-left: auto; /* Push to the far right */
+.nav-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.nav-arrow:hover {
-    background-color: #0056b3;
+.nav-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.nav-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    max-width: 200px; /* Adjust width as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

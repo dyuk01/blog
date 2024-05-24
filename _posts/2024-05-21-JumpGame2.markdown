@@ -1,0 +1,50 @@
+---
+layout: post
+title: Jump Game - 2
+date: 2024-05-21
+categories: leetcode String/Array python medium
+---
+## Problem
+![alt text](/blog/public/img/JumpGame2.png)
+
+## Approach
+The goal is to find the minimum amount of jumps required to reach the end. By updating last position and max distance seperately,  
+it allows us to keep track of minimum jups required. This algorithm is categorized as greedy BFS because  
+the algorithm always trys to jump to the maximum distance, and considers every possible jumps that one can make.  
+
+1. Check if the jump reached the end
+2. Find the maximum distance to jump
+3. If index arrives at the max distance jumped, update the variables
+
+## Code
+```python
+class Solution(object):
+    def jump(self, nums):
+        '''
+        Move : number of jumps taken to reach the end
+        i = number of index
+        lastpos = position after the last jump was done
+        maxdistance = maximum distance a jump can go
+        '''
+        move = 0
+        i = 0
+        lastpos = 0
+        maxdistance = 0
+        # Checks if the jump reached the end
+        while lastpos < len(nums) - 1:
+            # Find the maximum distance among the jumps
+            maxdistance = max(maxdistance, i + nums[i])
+            # Indicates jump was taken to maximum distance
+            if i == lastpos:
+                lastpos = maxdistance
+                move += 1
+            i += 1
+        return move
+```
+## Time Complexity
+O(n)
+> Iterates through the array(nums) once
+
+## Space Complexity
+O(1)
+> Constant amount of extra space is used

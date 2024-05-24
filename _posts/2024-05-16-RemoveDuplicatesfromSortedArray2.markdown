@@ -8,7 +8,7 @@ categories: leetcode String/Array python medium
 ![alt text](/blog/public/img/RemoveDuplicatesfromSortedArray2.png)
 
 ## Approach
-This problem is harder version of <a href="https://dyuk01.github.io/blog/leetcode/string/array/python/2024/05/16/RemoveDuplicatesfromSortedArray.html">Remove Duplicates from Sorted Array</a> problem, but the difference is that one duplicate can be included in the array.  
+This problem is a bit more complicated version of <a href="https://dyuk01.github.io/blog/leetcode/string/array/python/2024/05/16/RemoveDuplicatesfromSortedArray.html">Remove Duplicates from Sorted Array</a> problem, but the difference is that one duplicate can be included in the array.  
 In this case, we need to add few if statements to determine if the elements are duplicates.
 
 0. Since the list is in increasing (non-decreasing) order, there is no need to order the list.  
@@ -51,4 +51,4 @@ O(n)
 
 ## Space Complexity
 O(1)
-> Does not occupy any memory
+> Constant amount of extra space is used

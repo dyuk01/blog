@@ -1,0 +1,25 @@
+---
+layout: post
+title: H-Index
+date: 2024-05-24
+categories: leetcode String/Array python medium
+---
+## Problem
+![alt text](/blog/public/img/LengthofLastWord.png)
+
+## Approach
+Originally, I didn't understand the problem nor concept of H-Index. 
+
+
+## Code
+```python
+class Solution(object):
+
+```
+## Time Complexity
+O(n)
+
+## Space Complexity
+O(n)
+
+---

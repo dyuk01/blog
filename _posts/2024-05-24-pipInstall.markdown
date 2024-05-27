@@ -10,12 +10,16 @@ categories: installation
 python3 --version
 ```
 2. Download '<a href="https://bootstrap.pypa.io/get-pip.py" target="_blank">get-pip.py</a>' and navigate to the directory using 'cd'.
-3. Run the following script
+3. Run the following script:
 ```sh
 python3 get-pip.py
 ```
 4. After the installation, vertify that 'pip' has been installed
 ```sh
 pip3 --version
+```
+5. Now install any libraries using following script:
+```sh
+python 3 -m pip install "library name"
 ```
 ---

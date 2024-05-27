@@ -4,6 +4,7 @@ title: Find the Index of the First Occurrence in a String
 date: 2024-05-24
 categories: leetcode String/Array python easy
 ---
+
 ## Problem
 ![alt text](/blog/public/img/haystack.png)
 
@@ -47,4 +48,5 @@ However, recent optimizations in python sorting  algorithms makes the average ca
 ## Space Complexity
 O(1)
 > Does not use any extra space during the operation
+
 ---

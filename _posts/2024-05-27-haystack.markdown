@@ -9,7 +9,7 @@ categories: leetcode String/Array python easy
 ![alt text](/blog/public/img/haystack.png)
 
 ## Approach
-Initial approach was to iterate haystack and needle with two different variables--i and j--in order to find the stop point whenever the word is found within the array. However, I quickly faced a problem where the needle would pass through the needle's length amount whenever its trying to find a word. For example, the word "Mississippi" is the haystack, and "issippi" is the needle. Although "issippi" should return index 4, my code would iterate over the overlapped words and return -1.
+Initial approach was to iterate haystack and needle with two different variables, i and j, in order to find the stop point whenever the word is found within the array. However, I quickly faced a problem where the needle would pass through the needle's length amount whenever its trying to find a word. For example, the word "Mississippi" is the haystack, and "issippi" is the needle. Although "issippi" should return index 4, my code would iterate over the overlapped words and return -1.
 
 ```python
 class Solution(object):
@@ -47,6 +47,6 @@ However, recent optimizations in python sorting  algorithms makes the average ca
 
 ## Space Complexity
 O(1)
-> Does not use any extra space during the operation
+> Does not use any extra space during the operation  
 
 ---

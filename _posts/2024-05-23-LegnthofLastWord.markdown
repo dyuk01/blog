@@ -28,4 +28,6 @@ O(n)
 
 ## Space Complexity
 O(n)
-> In the worst scenario, if the words in input array consists of only single characters, the list will contain n words
+> In the worst scenario, if the words in input array consists of only single characters, the list will contain n words  
+
+---

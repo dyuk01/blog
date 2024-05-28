@@ -51,7 +51,9 @@ associated with dynamic memory allocation and deallocation
 - Reversing an Array
 > Swaps elements from both ends moving towards the center.
 - In-place Rotation
-> Rotates elements within the array.
+> Rotates elements within the array.  
+
+---
 
 
 <style>

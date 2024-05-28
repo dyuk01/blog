@@ -20,6 +20,6 @@ class Solution(object):
 O(n)
 
 ## Space Complexity
-O(n)
+O(n)  
 
 ---

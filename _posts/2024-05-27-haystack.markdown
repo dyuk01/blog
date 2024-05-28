@@ -46,6 +46,6 @@ However, recent optimizations in python sorting  algorithms makes the average ca
 
 ## Space Complexity
 O(1)
-> Does not use any extra space during the operation
+> Does not use any extra space during the operation  
 
 ---

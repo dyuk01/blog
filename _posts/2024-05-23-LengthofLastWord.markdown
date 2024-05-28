@@ -24,7 +24,7 @@ class Solution(object):
 ```
 ## Time Complexity
 O(n)
-> split function goes through each character in the array, making the worst scenario O(n)
+> Split function goes through each character in the array, making the worst scenario O(n)
 
 ## Space Complexity
 O(n)

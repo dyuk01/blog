@@ -37,10 +37,10 @@ class Solution(object):
 
 ## Time Complexity
 O(n)
-> Loop iterates through n 2 times, resulting in O(2n) which simplifies to O(n).
+> Loop iterates through n 2 times, resulting in O(2n) which simplifies to O(n)
 
 ## Space Complexity
 O(1)
-> Original answer would be O(n), since we are initializing the size of an int array by n, but the problem states that "The output array does not count as extra space for space complexity analysis." in its follow-up statement. Thus, resulting in O(1).
+> Original answer would be O(n), since we are initializing the size of an int array by n, but the problem states that "The output array does not count as extra space for space complexity analysis." in its follow-up statement. Thus, resulting in O(1)
 
 ---

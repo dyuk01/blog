@@ -5,6 +5,7 @@ date: 2024-05-24
 categories: leetcode String/Array python medium
 ---
 ## Problem
+![alt text](/blog/public/img/hIndex.png)
 
 ## Approach
 The goals it find the h-index, which is to find the maximum value of n papers with n citations. In algorithm, we can just count how many papers have more citations than their position in the sorted list.

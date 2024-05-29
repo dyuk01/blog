@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Quick Sort
-date: 2024-05-17
-categories: algorithm python
+date: 2024-0?-??
+categories: algorithm
 ---
 ## Problem
 ![alt text]()

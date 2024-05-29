@@ -2,7 +2,7 @@
 layout: post
 title: H-Index
 date: 2024-05-24
-categories: leetcode String/Array python medium
+categories: leetcode String/Array python
 ---
 ## Problem
 ![alt text](/blog/public/img/hIndex.png)

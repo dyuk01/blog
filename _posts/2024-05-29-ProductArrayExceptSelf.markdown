@@ -2,7 +2,7 @@
 layout: post
 title: Product of Array Except Self 
 date: 2024-05-29
-categories: leetcode String/Array python medium
+categories: leetcode String/Array python
 ---
 
 ## Problem

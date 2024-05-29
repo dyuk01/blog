@@ -2,7 +2,7 @@
 layout: post
 title: Best Time to Buy and Sell Stock
 date: 2024-05-17
-categories: leetcode String/Array python easy
+categories: leetcode String/Array python
 ---
 ## Problem
 ![alt text](/blog/public/img/BuyStock.png)

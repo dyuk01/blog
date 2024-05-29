@@ -2,7 +2,7 @@
 layout: post
 title: Find the Index of the First Occurrence in a String
 date: 2024-05-27
-categories: leetcode String/Array python easy
+categories: leetcode String/Array python
 ---
 
 ## Problem

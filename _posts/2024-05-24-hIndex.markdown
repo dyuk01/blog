@@ -5,7 +5,6 @@ date: 2024-05-24
 categories: leetcode String/Array python medium
 ---
 ## Problem
-![alt text](/blog/public/img/hIndex.png)
 
 ## Approach
 The goals it find the h-index, which is to find the maximum value of n papers with n citations. In algorithm, we can just count how many papers have more citations than their position in the sorted list.
@@ -42,6 +41,7 @@ class Solution(object):
 ## Time Complexity
 O(nlogn)
 > Sort function takes O(nlogn), and enumerating the list takes O(n). Thus, having O(nlogn) as time complexity.
+
 ## Space Complexity
 O(n)  
 > Sorting and enumerating the sorted list both take O(n) space complexity. Resulting in O(n) total.

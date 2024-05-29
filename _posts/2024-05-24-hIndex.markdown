@@ -5,21 +5,45 @@ date: 2024-05-24
 categories: leetcode String/Array python medium
 ---
 ## Problem
-![alt text](/blog/public/img/LengthofLastWord.png)
+![alt text](/blog/public/img/hIndex.png)
 
 ## Approach
-Originally, I didn't understand the problem nor concept of H-Index. 
+The goals it find the h-index, which is to find the maximum value of n papers with n citations. In algorithm, we can just count how many papers have more citations than their position in the sorted list.
+
+1. Sort the citations in descending order
+2. Compare the current index with value
+3. If value is greater than index, increment
+4. Return the number of h-index
 
 
 ## Code
 ```python
 class Solution(object):
+    def hIndex(self, citations):
+        # Sort the citations in descending order
+        sorted_citations = sorted(citations, reverse=True)
+
+        # Enumerate the sorted list to get pairs of (index, value)
+        enumerated_sorted_citations = list(enumerate(sorted_citations))
+
+        # Initialize a counter to count how many times the index is less than the value
+        count = 0
+
+        # Iterate over the enumerated sorted list
+        for i, j in enumerated_sorted_citations:
+         # Check if the index is less than the value and increment if true
+            if i < j:
+                count += 1
+
+        # Return H-index
+        return count
 
 ```
 ## Time Complexity
-O(n)
-
+O(nlogn)
+> Sort function takes O(nlogn), and enumerating the list takes O(n). Thus, having O(nlogn) as time complexity.
 ## Space Complexity
 O(n)  
+> Sorting and enumerating the sorted list both take O(n) space complexity. Resulting in O(n) total.
 
 ---

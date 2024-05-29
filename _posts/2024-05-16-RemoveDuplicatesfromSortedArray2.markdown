@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Remove Duplicates from Sorted Array - 2
+title: Remove Duplicates from Sorted Array II
 date: 2024-05-16
 categories: leetcode String/Array python
 ---

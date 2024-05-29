@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Jump Game - 2
+title: Jump Game II
 date: 2024-05-21
-categories: leetcode String/Array python medium
+categories: leetcode String/Array python
 ---
 ## Problem
 ![alt text](/blog/public/img/JumpGame2.png)

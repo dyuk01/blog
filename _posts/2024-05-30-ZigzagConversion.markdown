@@ -6,7 +6,7 @@ categories: leetcode string/array python
 ---
 
 ## Problem
-![alt text](/blog/public/img/ReverseWord.png)
+![alt text](/blog/public/img/ZigzagConversion.png)
 
 ## Approach
 Goal is to reverse a string without reversing the characters of the letters. This means that simply reversing the whole array will not work for this problem. In order to do this, we have to:
@@ -17,22 +17,6 @@ Goal is to reverse a string without reversing the characters of the letters. Thi
 
 ## Code
 ```python
-class Solution(object):
-    def reverseWords(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
-        # Remove front and end whitespace
-        s = s.strip()
-        # Seperate the string into series of words
-        s = s.split()
-        # Reverse the string
-        s = s[::-1]
-        # Merge the words into a string seperated by space.
-        s = " ".join(s)
-
-        return s
         
 ```
 

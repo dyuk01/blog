@@ -20,9 +20,7 @@ categories: leetcode string/array python
 O(n)
 > 
 
-
 ## Space Complexity
 O(1)
-> Because s was given as an input, modifying s to return as a output value does not impact the space complexity
-
+> 
 ---

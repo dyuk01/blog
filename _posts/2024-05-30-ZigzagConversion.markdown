@@ -18,7 +18,8 @@ categories: leetcode string/array python
 
 ## Time Complexity
 O(n)
-> strip, split, reverse, and join function all runs for O(n) because they all iterate through each character in the array only once. Thus, the length of n in total. O(n) + O(n) + O(n) + O(n) = O(4n), which simplifies to O(n)
+> 
+
 
 ## Space Complexity
 O(1)

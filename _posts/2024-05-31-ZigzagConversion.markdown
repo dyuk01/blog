@@ -2,7 +2,7 @@
 layout: post
 title: Zigzag Conversion
 date: 2024-05-31
-categories: leetcode string/array python
+categories: leetcode String/Array python
 ---
 
 ## Problem

@@ -1,0 +1,26 @@
+---
+layout: post
+title: Plus One
+date: 2024-06-01
+categories: leetcode String/Array python
+---
+
+## Problem
+![alt text](/blog/public/img/ZigzagConversion.png)
+
+## Approach
+
+
+## Code
+```python
+        
+```
+
+## Time Complexity
+O(n)
+> 
+
+## Space Complexity
+O(1)
+> 
+---

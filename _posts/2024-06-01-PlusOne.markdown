@@ -6,7 +6,7 @@ categories: leetcode String/Array python
 ---
 
 ## Problem
-![alt text](/blog/public/img/ZigzagConversion.png)
+![alt text](/blog/public/img/PlusOne.png)
 
 ## Approach
 

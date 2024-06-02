@@ -9,7 +9,7 @@ categories: leetcode String/Array python
 ![alt text](/blog/public/img/ZigzagConversion.png)
 
 ## Approach
-
+Since the problem asks us to print out row by row, the approach was to make 'numRows' amount of arrays to print. By having multiple arrays, I could go back and forth to store arrays according to their zigzag order and just print them out by rows in the end.
 
 ## Code
 ```python
@@ -28,13 +28,13 @@ class Solution(object):
         L = [''] * numRows
         index, step = 0, 1
 
-        # Move 
+        # Iterate through original array
         for x in s:
             L[index] += x
             # If a character hit the ceiling, move down
             if index == 0:
                 step = 1
-            # If a character hi the floor, move up
+            # If a character hit the floor, move up
             elif index == numRows -1:
                 step = -1
             index += step
@@ -44,10 +44,10 @@ class Solution(object):
 
 ## Time Complexity
 O(n)
-> 
+> Iterates n amounts of input characters
 
 ## Space Complexity
-O(1)
-> 
+O(n)
+> Maximum space it takes O(numRows) with O(n) (length of input string). With join function also being O(n), the total space complexity for this code would be O(n)
 
 ---

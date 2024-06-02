@@ -21,7 +21,7 @@ pip3 --version
 ```
 5. Now install any libraries using following script:
 ```sh
-python 3 -m pip install "library name"
+python3 -m pip install "library name"
 ```  
 or
 ```sh

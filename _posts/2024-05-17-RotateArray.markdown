@@ -7,8 +7,8 @@ categories: leetcode String/Array python
 ## Problem
 ![alt text](/blog/public/img/RotateArray.png)
 
-## Code
-My initial approach was to have nested for loop like below,
+## Approach
+My initial approach was to have nested for loop like below,  
 ```python
 class Solution(object):
     def rotate(self, nums, k):
@@ -34,14 +34,15 @@ I assumed that the problem was looking for O(n) since there was a case with larg
 
 I was lost at first, but soon realized how it works after looking at the solution.  
 ![alt text](/blog/public/img/RotateArrayExplanation.png)  
-Although the order that I understood does not exactly match with the image, I structued my code based on this explanation.    
-## Approach
+Although the order that I understood does not exactly match with the image, I structued my code based on this explanation.  
+
 1. First, make a reverse function
 2. Initialize a pivot function
 3. Reverse the whole array
 4. Reverse the left side of the array
 5. Reverse the right side of the array  
 
+## Code
 ```python
 class Solution(object):
     def reverse(self, nums, start, end) :

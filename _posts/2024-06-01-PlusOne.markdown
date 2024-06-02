@@ -2,7 +2,7 @@
 layout: post
 title: Plus One
 date: 2024-06-01
-categories: leetcode String/Array python
+categories: leetcode math python
 ---
 
 ## Problem

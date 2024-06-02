@@ -1,0 +1,27 @@
+---
+layout: post
+title: 
+date: 2024-06-02
+categories: leetcode String/Array python
+---
+
+## Problem
+![alt text](/blog/public/img/PlusOne.png)
+
+## Approach
+
+
+## Code
+```python
+
+```
+
+## Time Complexity
+O(n)
+> 
+
+## Space Complexity
+O(n)
+>  
+
+---

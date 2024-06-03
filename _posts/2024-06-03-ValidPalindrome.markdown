@@ -44,5 +44,6 @@ O(n)
 > Initializing the return value takes up to n (length of input string). Thus, resulting in O(n)
 
 ## Possible Improvement
-Initializing result won't be necessary, since we can check the characteristics of palindrome inside the while loop with .isalnum() and .islower() with s[l] and s[r].
+Initializing result won't be necessary, since we can check the characteristics of palindrome inside the while loop with .isalnum() and .islower() with s[l] and s[r]
+
 ---

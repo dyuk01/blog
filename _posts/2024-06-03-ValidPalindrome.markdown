@@ -9,65 +9,40 @@ categories: leetcode two_pointers python
 ![alt text](/blog/public/img/ValidPalindrome.png)
 
 ## Approach
+Goal is to find if an input string provided is a palindrome or not. This is done after "converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters", which means that there should be only alphabets and numeric values.
 
+1. Convert the input string into alphanumeric string
+2. Start from start and end, and continue the loop until they meet at the middle
 
 ## Code
 ```python
-class RandomizedSet(object):
+class Solution(object):
+    def isPalindrome(self, s):
+        # Transforms an input string input alphanumeric string
+        result = ''.join([char.lower() for char in s if char.isalnum()])
 
-    def __init__(self):
-        self.list = []
-        self.map = {}
+        # Left and Right pointers to keep track of Palindrome's validity
+        l = 0
+        r = len(result) - 1
 
-    def insert(self, val):
-        """
-        :type val: int
-        :rtype: bool
-        """
-        if val in self.list:
-            return False
-        self.list.append(val)
-        self.map[val] = len(self.list) - 1
+        while l < r:
+            # If the string is not mirrored, return False
+            if result[l] != result[r]:
+                return False
+            # Next Iteration
+            l += 1
+            r -= 1
         return True
-
-    def remove(self, val):
-        """
-        :type val: int
-        :rtype: bool
-        """
-        if val not in self.list:
-            return False
-        last_element = self.list[-1]
-        remove_element = self.map[val]
-        self.map[last_element] = remove_element
-        self.list[remove_element] = last_element
-        self.list[-1] = val
-        self.list.pop()
-        self.map.pop(val)
-        return True
-        
-
-    def getRandom(self):
-        """
-        :rtype: int
-        """
-        return random.choice(self.list)
-        
-
-
-# Your RandomizedSet object will be instantiated and called as such:
-# obj = RandomizedSet()
-# param_1 = obj.insert(val)
-# param_2 = obj.remove(val)
-# param_3 = obj.getRandom()
 ```
 
 ## Time Complexity
 O(n)
-> 
+> The loop always checks for the length of string once
 
 ## Space Complexity
 O(n)
->  
+> Initializing the return value takes up to n (length of input string). Thus, resulting in O(n)
 
+## Possible Improvement
+Initializing result won't be necessary, since we can check the characteristics of palindrome inside the while loop with .isalnum() and .islower() with s[l] and s[r].
 ---

@@ -9,7 +9,7 @@ categories: leetcode two_pointers python
 ![alt text](/blog/public/img/TwoSum2.png)
 
 ## Approach
-The easiest solution would be to have nested for loop, which calculates the sum for each index. However, the process will take time and have time complexity of O(n^2). So, having two pointers--left and right--that starts from the both ends will reduce the time complexity to O(n) while still solving for the correct answer.
+The easiest solution would be to have nested for loop, which calculates the sum for each index. However, the process will take time and have time complexity of O(n<sup>2</sup>). So, having two pointers--left and right--that starts from the both ends will reduce the time complexity to O(n) while still solving for the correct answer.
 
 1. Initialize 2 pointers from the both ends
 2. Make while loop to keep iterating until left becomes larger than right (out of bound)  

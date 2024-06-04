@@ -40,6 +40,6 @@ O(n)
 
 ## Space Complexity
 O(1)
-> Only new variable initialized is 'index', which is an int variable(fixed amount). Resulting of O(1)
+> Only new variable initialized is 'index', which is an int variable(fixed amount). Resulting in O(1)
 
 ---

@@ -46,7 +46,7 @@ class Solution(object):
 
 ## Time Complexity
 O(n)
-> left and right pointers start from the end and meet at the middle at the worst scenario. Thus O(n)
+> Left and right pointers start from the end and meet at the middle at the worst scenario. Thus O(n)
 
 ## Space Complexity
 O(1)

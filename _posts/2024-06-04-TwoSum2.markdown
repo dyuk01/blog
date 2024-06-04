@@ -50,6 +50,6 @@ O(n)
 
 ## Space Complexity
 O(1)
-> Initializes two int variables, which are fixed amount of space. Therefore O(1)
+> Initializes two int variables, which are fixed amount of space. Therefore O(1).
 
 ---

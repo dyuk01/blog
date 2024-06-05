@@ -2,7 +2,7 @@
 layout: post
 title: Find other IP addresses within local network using nmap (Mac)
 date: 2024-06-05
-categories: security
+categories: security installation
 ---
 
 ## Procedure

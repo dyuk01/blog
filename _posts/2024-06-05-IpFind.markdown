@@ -10,7 +10,7 @@ categories: security
 ```bash
 pip3 install python-nmap
 ```
-2. Download the <a href="https://nmap.org/download" target="_blank">nmap package</a> as well. Since this package does not get recognized by mac itself, user must 
+2. Download the <a href="https://nmap.org/download" target="_blank">nmap package</a> as well. Since this package does not get recognized by mac itself, user must enable 
 
 
 ---

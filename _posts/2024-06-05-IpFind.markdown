@@ -20,8 +20,7 @@ ipconfig getifaddr en0
 nmap -sP xxx.xxx.0.0/24  
 ```  
 -sP : "Ping Scan" option that nmap sends ping to determine which hosts are up on the designated network.  
-/24 : Type of CIDR notation, which represents subnet mask of 255.255.255.0. This means the command will scan all 256 IP address of the designated IP address
-
+/24 : Type of <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" target="_blank">CIDR</a> notation, which represents subnet mask of 255.255.255.0. This means the command will scan all 256 IP address of the designated IP address
 5. The following command is given to see the MAC address for each corresponding IP address for device.
 ```bash
 arp -a

@@ -2,7 +2,7 @@
 layout: post
 title: Reverse Word
 date: 2024-05-30
-categories: leetcode String/Array python
+categories: leetcode python
 ---
 
 ## Problem

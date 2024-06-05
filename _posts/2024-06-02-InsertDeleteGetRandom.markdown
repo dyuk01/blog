@@ -2,7 +2,7 @@
 layout: post
 title: Insert Delete GetRandom O(1) 
 date: 2024-06-02
-categories: leetcode String/Array python
+categories: leetcode python
 ---
 
 ## Problem

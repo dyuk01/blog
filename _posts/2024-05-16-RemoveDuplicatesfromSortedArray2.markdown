@@ -2,7 +2,7 @@
 layout: post
 title: Remove Duplicates from Sorted Array II
 date: 2024-05-16
-categories: leetcode String/Array python
+categories: leetcode python
 ---
 ## Problem
 ![alt text](/blog/public/img/RemoveDuplicatesfromSortedArray2.png)

@@ -2,7 +2,7 @@
 layout: post
 title: Jump Game
 date: 2024-05-18
-categories: leetcode String/Array python
+categories: leetcode python
 ---
 ## Problem
 ![alt text](/blog/public/img/JumpGame.png)

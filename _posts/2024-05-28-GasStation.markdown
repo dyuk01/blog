@@ -2,7 +2,7 @@
 layout: post
 title: Gas Station
 date: 2024-05-28
-categories: leetcode String/Array python
+categories: leetcode python
 ---
 
 ## Problem

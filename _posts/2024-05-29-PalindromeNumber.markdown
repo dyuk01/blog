@@ -2,7 +2,7 @@
 layout: post
 title: Palindrome Number
 date: 2024-05-29
-categories: leetcode math python
+categories: leetcode python
 ---
 
 ## Problem

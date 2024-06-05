@@ -2,7 +2,7 @@
 layout: post
 title: Roman to Integer
 date: 2024-05-20
-categories: leetcode String/Array python
+categories: leetcode python
 ---
 ## Problem
 ![alt text](/blog/public/img/RomantoInteger.png)

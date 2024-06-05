@@ -2,7 +2,7 @@
 layout: post
 title: Valid Palindrome
 date: 2024-06-03
-categories: leetcode two_pointers python
+categories: leetcode python
 ---
 
 ## Problem

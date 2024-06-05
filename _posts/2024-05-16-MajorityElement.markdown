@@ -2,7 +2,7 @@
 layout: post
 title: Majority Element
 date: 2024-05-16
-categories: leetcode String/Array python
+categories: leetcode python
 ---
 ## Problem
 ![alt text](/blog/public/img/MajorityElement.png)

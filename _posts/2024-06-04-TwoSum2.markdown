@@ -2,7 +2,7 @@
 layout: post
 title: Two Sum II - Input Array Is Sorted
 date: 2024-06-04
-categories: leetcode two_pointers python
+categories: leetcode python
 ---
 
 ## Problem

@@ -2,7 +2,7 @@
 layout: post
 title: Longest Common Prefix 
 date: 2024-05-29
-categories: leetcode String/Array python
+categories: leetcode python
 ---
 
 ## Problem

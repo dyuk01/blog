@@ -2,7 +2,7 @@
 layout: post
 title: Length of Last Word 
 date: 2024-05-23
-categories: leetcode String/Array python
+categories: leetcode python
 ---
 ## Problem
 ![alt text](/blog/public/img/LengthofLastWord.png)

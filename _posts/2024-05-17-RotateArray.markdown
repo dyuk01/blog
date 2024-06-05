@@ -2,7 +2,7 @@
 layout: post
 title: Rotate Array
 date: 2024-05-17
-categories: leetcode String/Array python
+categories: leetcode python
 ---
 ## Problem
 ![alt text](/blog/public/img/RotateArray.png)

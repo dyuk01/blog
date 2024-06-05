@@ -2,7 +2,7 @@
 layout: post
 title: Is Subsequence
 date: 2024-06-04
-categories: leetcode two_pointers python
+categories: leetcode python
 ---
 
 ## Problem

@@ -37,10 +37,10 @@ class Solution(object):
 
 ## Time Complexity
 O(n)
->  
+> The algorithm visits node exactly once
 
 ## Space Complexity
 O(h)
-> 
+> Memory usage depends on the depth of the tree since recursion runs for depth amount
 
 ---

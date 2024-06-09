@@ -1,0 +1,69 @@
+---
+layout: post
+title: Same Tree
+date: 2024-06-09
+categories: leetcode python
+---
+
+## Problem
+![alt text](/blog/public/img/SameTree.png)
+
+## Approach
+The goal is to compare the order of 2 trees--p and q--and determine whether they are identical or not.  
+
+## Code
+```python
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def isSameTree(self, p, q):
+        """
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: bool
+        """
+        return str(p) == str(q)
+```
+
+```python
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def isSameTree(self, p, q):
+        """
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: bool
+        """
+        # Reached the End
+        if p is None and q is None:
+            return True
+        # Order is different from another
+        if p is None or q is None:
+            return False
+        # Values are the same. Continue the recursion
+        if p.val == q.val:
+            return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+        return False
+
+        #return str(p) == str(q)
+```
+At first,  
+
+## Time Complexity
+O(n)
+> The loop iterates through each element once
+
+## Space Complexity
+O(1)
+> Only initializes int variables, which are irrelevent to the length of the array
+
+---

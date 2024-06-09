@@ -12,7 +12,8 @@ Whenever utilizing keys--such as API or openAI source--to use in open-source/pub
 
 1. Make .gitignore folder
 > This tells github to ignore the noted files
-2. Create a file('config.py' for example) that contains API keys.
+2. Create a file('config.py') that contains API keys.
+> Does not have to be config.py. Freely rename
 ```python
 # .gitignore should include reference to config.py
 api_key = "YOUR_KEY"
@@ -20,7 +21,9 @@ api_secret = "YOUR_SECRET"
 access_token = "YOUR_ACCESS_TOKEN"
 token_secret = "YOUR_TOKEN_SECRET"
 ```
+
 3. Import the api_key to the main project
+
 ```python
 import config
 

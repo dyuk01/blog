@@ -14,7 +14,7 @@ Whenever utilizing keys--such as API or openAI source--to use in open-source/pub
 > This tells github to ignore the noted files
 
 2. Create a file('config.py') that contains API keys.
-> Does not have to be config.py. Freely rename
+> Does not have to be config.py. Freely rename the file
 
 ```python
 # .gitignore should include reference to config.py

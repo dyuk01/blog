@@ -9,25 +9,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/MinimumAbsoluteBST.png)
 
 ## Approach
-The goal is to compare the order of 2 trees--p and q--and determine whether they are identical or not. Since we have to know if every node of a tree is equivalent to another, we need to traverse through each tree and compare them with another.
-
-```python
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution(object):
-    def isSameTree(self, p, q):
-        """
-        :type p: TreeNode
-        :type q: TreeNode
-        :rtype: bool
-        """
-        return str(p) == str(q)
-```
-The first approach was to turn the nodes into string and compare them. This can be an easy solution, but doesn't demonstrate any logic process. That is why I decided to use another way to solve the question despite its correctness.
+The goal is to find the minimum value between the nodes. To achieve this, using recursion to traverse through the nodes will be sufficient.
 
 ## Code
 ```python
@@ -38,28 +20,27 @@ The first approach was to turn the nodes into string and compare them. This can 
 #         self.left = left
 #         self.right = right
 class Solution(object):
-    def isSameTree(self, p, q):
+    # Finds the minimum between the nodes by traversing through the nodes via recursion
+    def findMin(self, node, l, h):
+        # Reached the leaf node. Find the minimum
+        if not node:
+            return h - l
+        left = self.findMin(node.left, l, node.val)
+        right = self.findMin(node.right, node.val, h)
+        return min(left, right)
+    
+    def getMinimumDifference(self, root):
         """
-        :type p: TreeNode
-        :type q: TreeNode
-        :rtype: bool
+        :type root: TreeNode
+        :rtype: int
         """
-        # Reached the End
-        if p is None and q is None:
-            return True
-        # Order is different from another
-        if p is None or q is None:
-            return False
-        # Values are the same. Continue the recursion
-        if p.val == q.val:
-            return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
-        return False
+        return self.findMin(root, float('-inf'), float('inf'))
+        
 ```
-This algorithm uses recursion to traverse through the nodes. It first checks for the destination/failure scenarios, and keeps iterating through the nodes.
 
 ## Time Complexity
 O(n)
-> The algorithm only traverses through p and q nodes, which is O(n) + O(n) = O(2n). Resulting in O(n)
+> The algorithm traverses through the nodes in a tree. Thus having O(n)
 
 ## Space Complexity
 O(n)

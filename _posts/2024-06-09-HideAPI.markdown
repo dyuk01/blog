@@ -38,7 +38,7 @@ import config
 api_key = config.api_key
 ```
 
-5. If the hidden files are still shown in Github, navigate to your local file and type the following script
+5. If the hidden files are still shown in Github, navigate to your local file and type the following script (Commmit any changes before running)
 
 ```bash
 git rm -rf --cached .

@@ -7,7 +7,8 @@ categories: programmers python
 
 ## Problem
 ![alt text](/blog/public/img/SuggestID.png)
-Translation :  
+
+## Translation
 Neo, a new developer who joined Kakao, has been assigned to the "Kakao Account Development Team" and is tasked with creating IDs for users who join the Kakao service. Neo's first task is to develop a program that recommends IDs to new users who enter IDs that do not comply with Kakao ID rules. The following are the rules for Kakao IDs.  
   
 The length of the ID must be between 3 and 15 characters.  

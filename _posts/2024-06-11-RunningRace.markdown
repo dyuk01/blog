@@ -14,7 +14,10 @@ Every year, a running race is held in Yan. The commentators call out the name of
 Given a string array players containing the names of the players in the order from 1st place to the current rank, and a string array callings containing the names called out by the commentators, complete the function solution that returns the names of the players in the order from 1st place to the current rank after the race is over.
 
 ## Approach
+The key is to have a dictionary in order to keep track of the player's name and their current position
 
+1. Create a dictionary with player's name and position
+2. Based on calling, swap their name and their position
 
 ## Code
 ```python
@@ -35,10 +38,10 @@ def solution(players, callings):
 
 ## Time Complexity
 O(n)
-> The functions (.lower(), .sub(), .strip()) used throughout the algorithm iterates through the length of the array. Thus, O(n)
+> Iterates through players and callings exactly once
 
 ## Space Complexity
 O(n)
-> Space of O(n) is required when the functions alter the characters of the input string
+> Initializes a dictionary that stores the exact amount of players
 
 ---

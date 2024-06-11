@@ -27,12 +27,12 @@ The goal is to follow the restrictions and suggest the correct formatted ID.
 import re
 
 def solution(new_id):
-    pattern = r'[^a-zA-Z0-9\-_.]'
+    special_ch = r'[^a-zA-Z0-9\-_.]'
     
     # lowercase
     new_id = new_id.lower()
     # only include isalnum, [-, _, .]
-    new_id = re.sub(pattern, '', new_id)
+    new_id = re.sub(special_ch, '', new_id)
     # replace any repeating '.' to one '.'
     new_id = re.sub(r'\.{2,}', '.', new_id)
     # exclude first and last '.'
@@ -52,10 +52,10 @@ def solution(new_id):
 
 ## Time Complexity
 O(n)
-> The algorithm traverses through the nodes in a tree. Thus having O(n)
+> The functions (.lower(), .sub(), .strip()) used throughout the algorithm iterates through the length of the array. Thus, O(n)
 
 ## Space Complexity
 O(n)
-> On average, the space complexity required will be O(h). With it's extreme case of a tree having all left/right nodes, time complexity can result O(n)
+> Space of O(n) is required when the functions alter the characters of the input string
 
 ---

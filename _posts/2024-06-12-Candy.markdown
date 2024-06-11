@@ -9,7 +9,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/Candy.png)
 
 ## Approach
-
+d
 
 ## Code
 ```python

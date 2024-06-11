@@ -1,41 +1,53 @@
 ---
 layout: post
-title: Minimum Absolute Difference in BST
-date: 2024-06-10
-categories: leetcode python
+title: Suggest ID
+date: 2024-06-11
+categories: programmers python
 ---
 
 ## Problem
-![alt text](/blog/public/img/MinimumAbsoluteBST.png)
+![alt text](/blog/public/img/SuggestID.png)
+Translation :  
+Neo, a new developer who joined Kakao, has been assigned to the "Kakao Account Development Team" and is tasked with creating IDs for users who join the Kakao service. Neo's first task is to develop a program that recommends IDs to new users who enter IDs that do not comply with Kakao ID rules. The following are the rules for Kakao IDs.  
+  
+The length of the ID must be between 3 and 15 characters.  
+IDs can only contain lowercase letters, numbers, hyphens (-), underscores (_), and periods (.).  
+However, periods (.) cannot be used at the beginning or end and cannot be used consecutively.  
+Neo is to develop a program that recommends new IDs that comply with the Kakao ID rules in the following seven-step sequential process when a new user enters an ID that does not comply with the rules.
 
 ## Approach
-The goal is to find the minimum value between the nodes. To achieve this, using recursion to traverse through the nodes will be sufficient.
+The goal is to follow the restrictions and suggest the correct formatted ID.  
+1. Limit ID Length
+2. Remove special characters with exceptions
+3. Remove repeating '.'
+4. Remove initial and trailing '.'
 
 ## Code
 ```python
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution(object):
-    # Finds the minimum between the nodes by traversing through the nodes via recursion
-    def findMin(self, node, l, h):
-        # Reached the leaf node. Find the minimum
-        if not node:
-            return h - l
-        left = self.findMin(node.left, l, node.val)
-        right = self.findMin(node.right, node.val, h)
-        return min(left, right)
+import re
+
+def solution(new_id):
+    pattern = r'[^a-zA-Z0-9\-_.]'
     
-    def getMinimumDifference(self, root):
-        """
-        :type root: TreeNode
-        :rtype: int
-        """
-        return self.findMin(root, float('-inf'), float('inf'))
-        
+    # lowercase
+    new_id = new_id.lower()
+    # only include isalnum, [-, _, .]
+    new_id = re.sub(pattern, '', new_id)
+    # replace any repeating '.' to one '.'
+    new_id = re.sub(r'\.{2,}', '.', new_id)
+    # exclude first and last '.'
+    new_id = new_id.strip('.')
+    if new_id == '':
+        new_id = 'a'
+
+    if len(new_id) > 15:
+        new_id = new_id[:15]
+        new_id = new_id.rstrip('.')
+
+    while len(new_id) < 3:
+        new_id += new_id[-1]
+
+    return new_id
 ```
 
 ## Time Complexity

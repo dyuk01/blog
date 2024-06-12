@@ -9,7 +9,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/Candy.png)
 
 ## Approach
-d
+Main goal is to give more candy to a child with a higher rating than the neighbor. Iterating through the array once with 2 pointers will not enough due to condition of the term 'neighbor' (check left and right). Thus, we have to iterate the array twice (Left->Right, Right->Left).
 
 ## Code
 ```python
@@ -35,10 +35,10 @@ class Solution(object):
 
 ## Time Complexity
 O(n)
-> 
+> Iterates through the array twice. O(n) + O(n) = O(2n), resulting in O(n)
 
 ## Space Complexity
 O(n)
-> 
+> Initializes the variable 'res', which is the length of the array
 
 ---

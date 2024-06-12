@@ -9,7 +9,11 @@ categories: leetcode python
 ![alt text](/blog/public/img/ValidParantheses.png)
 
 ## Approach
-Main goal is to give more candy to a child with a higher rating than the neighbor. Iterating through the array once with 2 pointers will not enough due to condition of the term 'neighbor' (check left and right). Thus, we have to iterate the array twice (Left->Right, Right->Left).
+The input strings are only consisted of parentheses, which means there is no need for checking invalid characters. First, add push every opening parentheses('[{('), and check for the validiity when checking for the closing parentheses(')}]')
+
+1. Initialize a stack
+2. Push opening parentheses into a stack
+3. When encountered with closing parentheses, compare with the top of the stack
 
 ## Code
 ```python
@@ -21,9 +25,11 @@ class Solution(object):
         """
         brac = []
         for ch in s:
+            # Accept every opening parentheses
             if ch in '[{(':
                 brac.append(ch)
             else:
+                # If closing parentheses don't match with the opening parentheses, or there is no opening parentheses, return False
                 if len(brac) == 0 or (ch == ')' and brac[-1] != '(') or \
                 (ch == '}' and brac[-1] != '{') or \
                 (ch == ']' and brac[-1] != '['):
@@ -34,10 +40,10 @@ class Solution(object):
 
 ## Time Complexity
 O(n)
-> Iterates through the array twice. O(n) + O(n) = O(2n), resulting in O(n)
+> Only iterates through the string 's' once
 
 ## Space Complexity
 O(n)
-> Initializes the variable 'res', which is the length of the array
+> Initializes the stack that can store at most length of s 
 
 ---

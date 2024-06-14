@@ -76,7 +76,7 @@ O(n<sup>2</sup>)
 > Searching for starting point's coordinate needs to check every single space in 2d matrix
 
 ## Space Complexity
-O(n)
+O(1)
 > Initializing variables throughout the algorithm only takes fixed amount of space (int variables)
 
 ---

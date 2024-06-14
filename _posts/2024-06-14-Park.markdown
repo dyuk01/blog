@@ -9,16 +9,14 @@ categories: programmers python
 ![alt text](/blog/public/img/Park.png)
 
 ## Translation
-The problem involves a robot dog navigating through a rectangular grid park represented by 'O' for walkable paths and 'X' for obstacles. The robot dog follows a list of commands given in the format:
-
-["direction distance", "direction distance" … ]
-
-For example, "E 5" means the robot dog moves 5 steps east from its current position. Before executing each command, the robot dog checks two conditions:
-
+The problem involves a robot dog navigating through a rectangular grid park represented by 'O' for walkable paths and 'X' for obstacles. The robot dog follows a list of commands given in the format:  
+["direction distance", "direction distance" … ]  
+For example, "E 5" means the robot dog moves 5 steps east from its current position. Before executing each command, the robot dog checks two conditions:  
 1. Whether the movement will cause it to go out of the park boundaries.
 2. Whether there are obstacles in the path during the movement.
 
 If either condition is met, the robot dog ignores that command and proceeds to the next one. The park has a width W and height H, with the top-left corner at (0, 0) and the bottom-right corner at (H - 1, W - 1).
+![alt text](/blog/public/img/ParkImage.png)
 
 Given the string array park representing the park layout and the string array routes containing the commands, implement the function solution to return the final position of the robot dog in the format [row, column].
 

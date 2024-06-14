@@ -1,0 +1,27 @@
+---
+layout: post
+title: In Line
+date: 2024-06-14
+categories: programmers python
+---
+
+## Problem
+![alt text](/blog/public/img/Park.png)
+
+## Translation
+
+## Approach
+
+## Code
+```python
+```
+
+## Time Complexity
+O(n<sup>2</sup>)
+> 
+
+## Space Complexity
+O(n)
+> 
+
+---

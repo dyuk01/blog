@@ -15,7 +15,7 @@ I noticed that my desktop was having problem with its storage partition, since m
 
 ## System Analysis
 1. Press 'Windows Key' + 'X' which should enable a list of tabs on the bottom
-2. Click 'command prompt(admin)'
+2. Click 'Command Prompt(admin)'
 3. Now, enter the following command:
 ```console
 Dism /online /cleanup-image /restorehealth

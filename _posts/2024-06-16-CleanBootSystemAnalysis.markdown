@@ -1,43 +1,29 @@
 ---
 layout: post
-title: Desktop Organization
+title: Clean Boot & System Analysis
 date: 2024-06-15
-categories: programmers python
+categories: tutorial
 ---
 
 ## Problem
-![alt text](/blog/public/img/DesktopOrganization.png)
+I noticed that my desktop was having problem with its storage partition, since my disk was storing about double the intended file size. Because I did not know the exact reason for this problem, I decided to clean boot and run system analysis to fix the issue.
 
-## Translation
+## Clean Boot
+1. Type 'msconfig' into the search bar, and click 'Service'.
+2. After clicking 'Hide Microsoft Service', check 'Disable All' and Confirm.
+3. Reboot
 
-
-## Approach
-1. Identify starting position from the park layout.
-2. Update position only if the movement is valid.
-3. Return the final position of the robot dog.
-
-## Code
-```python
-def solution(wallpaper):
-    x = []
-    y = []
-    # Navigate through the array and find the file's position
-    for i in range(len(wallpaper)):
-        for j in range(len(wallpaper[i])):
-            if wallpaper[i][j] == '#':
-                x.append(j)
-                y.append(i)
-    
-    answer = [min(y),min(x),max(y) + 1,max(x) + 1]
-    return answer
+## System Analysis
+1. Press 'Windows Key' + 'X' which should enable a list of tabs on the bottom
+2. Click 'command prompt(admin)'
+3. Now, enter the following command:
+```console
+Dism /online /cleanup-image /restorehealth
 ```
-
-## Time Complexity
-O(n<sup>2</sup>)
-> Searching for starting point's coordinate needs to check every single space in 2d matrix
-
-## Space Complexity
-O(1)
-> Initializing variables throughout the algorithm only takes fixed amount of space (int variables)
+4. After the scan, enter the following command :
+```console
+sfc /scannow
+```
+5. Restart the computer
 
 ---

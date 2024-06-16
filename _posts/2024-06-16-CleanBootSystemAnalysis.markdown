@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Clean Boot & System Analysis (Windows)
+title: Clean Boot & System Analysis
 date: 2024-06-16
-categories: tutorial
+categories: tutorial windows
 ---
 
 ## Problem

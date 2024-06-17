@@ -10,8 +10,7 @@ categories: algorithm
 2. The set of elements in the array is a pair, a triplet, or even a subarray
 
 ## How it works
-![alt text](/blog/public/img/TwoPointers.png)
-
+![alt text](/blog/public/img/TwoPointers.png)<br>
 Credit : <a href="https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed" target="_blank">Website</a>
 
 ---

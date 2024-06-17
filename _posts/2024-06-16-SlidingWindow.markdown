@@ -15,6 +15,6 @@ Sliding window is used to perform a required operation on a specific window size
   2. Adjust the length of the window according to the problem 
 ![alt text](/blog/public/img/SlidingWindow.png)
 
-Credit : https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
+Credit : <a href="https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed" target="_blank">Website</a>
 
 ---

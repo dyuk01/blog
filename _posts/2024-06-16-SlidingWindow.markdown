@@ -13,8 +13,7 @@ categories: algorithm
 Sliding window is used to perform a required operation on a specific window size of a given array or linked list.  
 > 1. Start from 1st element and keep shifting by 1 element to the right
   2. Adjust the length of the window according to the problem 
-![alt text](/blog/public/img/SlidingWindow.png)
-
-Credit : <a href="https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed" target="_blank">Website</a>
+![alt text](/blog/public/img/SlidingWindow.png)<br>
+Credit : <a href="https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed" target="_blank">14 Patterns to Ace Any Coding Interview Question</a>
 
 ---

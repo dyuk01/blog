@@ -9,8 +9,7 @@ categories: algorithm
 1. Asked to find cyclic linked list or arrays
 
 ## How it works
-![alt text](/blog/public/img/FastandSlowPointers.png)
-
-Credit : <a href="https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed" target="_blank">Website</a>
+![alt text](/blog/public/img/FastandSlowPointers.png)<br>
+Credit : <a href="https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed" target="_blank">14 Patterns to Ace Any Coding Interview Question</a>
 
 ---

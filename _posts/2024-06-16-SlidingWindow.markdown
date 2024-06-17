@@ -15,4 +15,17 @@ Sliding window is used to perform a required operation on a specific window size
   2. Ajust the length of the window according to the problem 
 ![alt text](/blog/public/img/SlidingWindow.png)
 
+## Types
+1. Fast/Slow
+> Have a fast pointer that grows window under certain condition, then have a slow pointer that shrinks the window after the condition is met
+
+2. Fast/Catchup
+> Similar to fast/slow method, but slow pointer doesn't gradually shrinks the window. Slow pointer immediately jumps to the fast pointer's position when the condition is met.
+
+3. Fast/Lagging
+>
+
+4. Front/Back
+>
+
 ---

@@ -48,7 +48,7 @@ def solution(n, k, enemy):
 ```
 
 2. Proceed the game regardless of the number of allies. If current allies become negative integer, consider using "invincibility" as "revive" skill, where you add the maximum number of enemies that you defeated to the number of allies.
-> Uses list or heap to store and pop the number of defeated enemies
+> Uses list or heap to store and pop the maximum number of defeated enemies in a round
 
 ```python
 import heapq

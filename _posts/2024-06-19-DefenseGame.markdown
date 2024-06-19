@@ -75,6 +75,7 @@ and we can see that the time complexity would be O(n<sup>3</sup>) vs O(n). A hug
 ## Time Complexity
 O(n)
 > Algorithm iterates through the input array exactly once.
+
 ## Space Complexity
 O(n)
 > Initializes heap that can be as large as the input array (when the user gets to the end of the rounds).

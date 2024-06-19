@@ -31,8 +31,8 @@ There are multiple methods to approach the problem:<br>
 > Uses list or heap to store and pop the maximum number of defeated enemies in a round
 
 ## Code
-I implemented both methods to compare the runtime difference,
-
+I implemented both methods to compare the runtime difference,<br>
+1.
 ```python
 def solution(n, k, enemy):
     for i in range(len(enemy) - 2):
@@ -52,7 +52,7 @@ def solution(n, k, enemy):
                     res = rounds
     return res
 ```
-
+2.
 ```python
 import heapq
 

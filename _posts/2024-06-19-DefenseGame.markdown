@@ -22,7 +22,7 @@ Junho wants to use the "invincibility" skill at the right time to progress throu
 Please complete the solution function to return how many rounds Junho can block, given the initial number of soldiers 'n', the number of times the "invincibility" skill can be used 'k', and the array 'enemy' that contains the number of enemies attacking in each round.
 
 ## Approach
-There are multiple ways to approach the problem<br>
+There are multiple ways to approach the problem:<br>
 
 1. Calculate every possible ways that the user can use their "invincibility" skill, and find the maximum round that one can go.
 > Uses nested for loop to calculate every possible scenario.
@@ -82,7 +82,7 @@ def solution(n, k, enemy):
         n -= enemy[i]
         if n < 0:
             if k > 0:
-                n += heapq.heappop(def_enemies) # n += heapq.heappop(def_enemies)[1]
+                n += -heapq.heappop(def_enemies) # n += heapq.heappop(def_enemies)[1]
                 k -= 1
             else :
                 return i
@@ -91,9 +91,9 @@ def solution(n, k, enemy):
 
 ## Time Complexity
 O(n)
-> 
+> Algorithm iterates through the input array exactly once.
 ## Space Complexity
 O(n)
-> 
+> Initializes heap that can be as large as the input array (when the user gets to the end of the rounds).
 
 ---

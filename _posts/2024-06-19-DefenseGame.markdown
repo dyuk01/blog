@@ -73,8 +73,8 @@ def solution(n, k, enemy):
 and we can see that the time complexity would be O(n<sup>3</sup>) vs O(n). A huge difference in runtime, and that is why I will be choosing method 2.
 
 ## Time Complexity
-O(n)
-> Algorithm iterates through the input array exactly once.
+O(nlogn)
+> Algorithm iterates through the input array exactly once, but push and pop operations are O(logn). Resulting in O(n) * O(logn) = O(nlogn).
 
 ## Space Complexity
 O(n)

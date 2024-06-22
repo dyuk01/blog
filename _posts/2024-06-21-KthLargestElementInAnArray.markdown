@@ -9,7 +9,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/KthLargestElementInAnArray.png)
 
 ## Approach
-The goal is to find the kth maximum array from the list. This can be done with a heap, which naturally stores minimum value at the top(min-heap).
+The goal is to find the kth maximum array from the list. Without using any kind of sorting, we can solve this problem with heap which naturally stores minimum value at the top(min-heap).
 
 1. Initialize heap
 2. Store the integers in the list as negative integers

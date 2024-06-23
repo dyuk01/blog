@@ -15,16 +15,17 @@ Given a string array maps representing the map, complete the solution function t
 
 ## Approach
 
+
 ## Code
 
 ```python
 ```
 ## Time Complexity
-O(logn)
-> 
+O(nm)
+> Each DFS call can run for O(nm) when there is food for every possible land, and loop runs for another (nm). Resulting total time complexity as O(nm)
 
 ## Space Complexity
-O(1)
-> 
+O(nm)
+> Each visited array, DFS stack, and island list initializes O(nm), resulting in O(3nm) which simplifies to O(nm)
 
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Clean Boot & System Analysis
 date: 2024-06-16
-categories: tutorial windows
+categories: manual windows
 ---
 
 ## Problem

@@ -2,7 +2,7 @@
 layout: post
 title: How to hide API keys
 date: 2024-06-09
-categories: tutorial
+categories: manual
 ---
 
 ## When to use

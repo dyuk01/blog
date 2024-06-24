@@ -45,10 +45,10 @@ class Solution(object):
 ```
 ## Time Complexity
 O(logn)
-> 
+> Binary Search has time complexity of O(logn)
 
 ## Space Complexity
 O(1)
-> 
+> Returns an int variable which has a fixed amount regardless of the input size
 
 ---

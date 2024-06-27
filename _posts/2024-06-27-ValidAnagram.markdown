@@ -9,33 +9,35 @@ categories: leetcode python
 ![alt text](/blog/public/img/ValidAnagram.png)
 
 ## Approach
+The key aspect to keep in mind:
+1. If the length is different, it cannot be an anagram
+2. Number of used characters are the same. Just in different order
 
 ## Code
 ```python
 class Solution(object):
-    def containsNearbyDuplicate(self, nums, k):
+    def isAnagram(self, s, t):
         """
-        :type nums: List[int]
-        :type k: int
+        :type s: str
+        :type t: str
         :rtype: bool
         """
-        lookup = {}
+        # Length different. Cannot be anagram
+        if len(s) != len(t):
+            return False
+        # Look through both sets, and check if numbers of used characters are different
+        for ch in set(s):
+            if s.count(ch) != t.count(ch):
+                return False
+        return True
         
-        for i in range(len(nums)):
-            # If num is present in lookup and satisfy the condition return True
-            if nums[i] in lookup and abs(dict[nums[i]]-i) <= k:
-                return True
-            # If num is not present in lookup then add it to lookup
-            lookup[nums[i]] = i
-        
-        return False
 ```
 ## Time Complexity
 O(n)
-> 
+> Looks through set(s), which increases with the input size 
 
 ## Space Complexity
 O(1)
-> 
+> Returns boolean, which does not increase with the input size
 
 ---

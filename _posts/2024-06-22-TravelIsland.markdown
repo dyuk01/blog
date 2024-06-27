@@ -2,7 +2,7 @@
 layout: post
 title: Travel Island
 date: 2024-06-22
-categories: Programmers python
+categories: programmers python
 ---
 
 ## Problem

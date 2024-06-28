@@ -46,7 +46,7 @@ def solution(n):
     return res
 ```
 ## Time Complexity
-O(n)
+O(n$\log_{3}{x}$)
 > Iteration ends if the conversion is complete. If a number is large, the algorithm will go through more conversions since it will divide the number by 3 multiple times
 
 ## Space Complexity

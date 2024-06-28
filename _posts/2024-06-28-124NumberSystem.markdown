@@ -15,7 +15,7 @@ In 124 Country, only natural numbers exist.
 In 124 Country, numbers are represented using only the digits 1, 2, and 4.
 For example, the numbers in the 124 Country system are converted as follows:
 
-| Decimal | 124 Country | Decimal | 124 Country |
+| Decimal | 124Country | Decimal | 124Country |
 | ---------- | ---------- | ---------- | ---------- |
 | 1 | 1 | 6 | 14 |
 | 2 | 2 | 7 | 21 |
@@ -48,11 +48,11 @@ def solution(n):
     return res
 ```
 ## Time Complexity
-O(n$\log_{3}{x}$)
-> Iteration ends if the conversion is complete. If a number is large, the algorithm will go through more conversions since it will divide the number by 3 multiple times
+O(log<sub>3</sub>(n)<sup>2</sup>)
+> Iteration divides the number by 3, which is O(log<sub>3</sub>). However, string concatenaton that occurs on every iteration makes the overall time complexity to O(log<sub>3</sub>(n)<sup>2</sup>) 
 
 ## Space Complexity
-O(n)
-> Result increases as the number increases
+O(log<sub>3</sub>(n)<sup>2</sup>)
+> Every iteration adds a character to the initialized return variable, which results as O(log<sub>3</sub>(n)<sup>2</sup>)
 
 ---

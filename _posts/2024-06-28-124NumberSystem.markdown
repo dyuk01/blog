@@ -15,14 +15,8 @@ In 124 Country, only natural numbers exist.
 In 124 Country, numbers are represented using only the digits 1, 2, and 4.
 For example, the numbers in the 124 Country system are converted as follows:
 
-Decimal	124 Country	Decimal	124 Country  
-1   1	6	14  
-2	2	7	21  
-3	4	8	22  
-4	11	9	24  
-5	12	10	41  
 | Decimal | 124 Country | Decimal | 124 Country |
-|:----------:|:----------:|:----------:|:----------:|
+| ---------- | ---------- | ---------- | ---------- |
 | 1 | 1 | 6 | 14 |
 | 2 | 2 | 7 | 21 |
 | 3 | 4 | 8 | 22 |

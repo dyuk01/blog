@@ -49,7 +49,7 @@ def solution(n):
 ```
 ## Time Complexity
 O((log<sub>3</sub>(n))<sup>2</sup>)
-> Iteration divides the number by 3, which is O(log<sub>3</sub>). However, string concatenaton that occurs on every iteration makes the overall time complexity to O((log<sub>3</sub>(n))<sup>2</sup>) 
+> Iteration divides the number by 3, which is O(log<sub>3</sub>(n)). However, string concatenaton that occurs on every iteration makes the overall time complexity to O((log<sub>3</sub>(n))<sup>2</sup>) 
 
 ## Space Complexity
 O((log<sub>3</sub>(n))<sup>2</sup>)

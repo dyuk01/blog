@@ -20,6 +20,8 @@ Initial approach was to use sliding window method to move left and right pointer
 > If right pointer's height is less/equal to the left pointer's height:
 > 1. Do the same for right pointers/max.
 
+3. Return trapped rain water
+
 ## Code
 ```python
 class Solution(object):

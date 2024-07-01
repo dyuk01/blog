@@ -56,6 +56,7 @@ class Solution(object):
 ## Time Complexity
 O(n)
 > Iterates through the 'height' array exactly once
+
 ## Space Complexity
 O(1)
 > Returns an int variable that uses constant amount of space

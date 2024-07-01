@@ -17,7 +17,8 @@ Initial approach was to use sliding window method to move left and right pointer
 > 1. Compare between left pointer's max and current left pointer's height.  
 > 2. If current value is greater than the left max, update left max  
 > 3. If current value is less than the left max, it means there is a space for water. Include to the result  
-If right pointer's height is less/equal to the left pointer's height, do the same for right pointers/max.
+> If right pointer's height is less/equal to the left pointer's height:
+> 1. Do the same for right pointers/max.
 
 ## Code
 ```python

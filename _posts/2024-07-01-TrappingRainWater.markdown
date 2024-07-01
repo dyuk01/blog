@@ -30,15 +30,21 @@ class Solution(object):
         l = l_max = r_max = res = 0
         r = len(height) - 1
         while l <= r:
+            # Left height is less/equal to right height
             if height[l] <= height[r]:
+                # Update l_max
                 if height[l] >= l_max:
                     l_max = height[l]
+                # Water detected. Add water
                 else:
                     res += l_max - height[l]
                 l += 1
+            # Right height is less/equal to left height
             else:
+                # Update r_max
                 if height[r] >= r_max:
                     r_max = height[r]
+                # Water detected. Add water
                 else:
                     res += r_max - height[r]
                 r -= 1

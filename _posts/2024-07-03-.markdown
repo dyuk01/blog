@@ -9,7 +9,16 @@ categories: leetcode python
 ![alt text](/blog/public/img/SearchInRotatedSortedArray.png)
 
 ## Approach
+Blindly using binary search will not work since its contents are no longer sorted when rotated. To tackle this problem, we need to first find the pivot point, then use binary search according to the pivot point found:
 
+1. Find the Pivot
+> Use binary search to find the pivot where the array is rotated  
+Initialize two pointers, l and r, at the start and end of the array  
+Check the middle element. If it is greater than the next element, then the middle element is the pivot  
+Adjust the left or right pointers based on the middle element's comparison with the first element
+
+2. Binary Search on the Correct Subarray
+> Once the pivot is identified, determine which subarray (left or right of the pivot) contains the target value and perform a binary search on that subarray
 
 ## Code
 ```python

@@ -9,6 +9,11 @@ categories: leetcode python
 ![alt text](/blog/public/img/TwoSum.png)
 
 ## Approach
+It would be easy to solve the question by choosing the answer from all the possible answers with using nested for loop. However, the time complexity would be O(n<sup>2</sup>), which is not ideal. Instead, using two pointers or hashmap to figure out the answer would be better solution since their time complexity would be O(nlogn) or O(n). Since using hashmap is the most optimal in time complexity wise, I will be using hashmap in order to solve this problem.
+
+1. Initialize hashmap
+2. Because the problem stated that there always is a solution, target subtracted by a number has to equal another number. This can be translated to an equation: target - num1 = num2
+3. Using hashmap, store the number if the two numbers are not two sum, and return if it is
 
 ## Code
 ```python

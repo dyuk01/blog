@@ -25,7 +25,6 @@ class Solution(object):
         :rtype: int
         """
         l, r = 0, len(nums) - 1
-
         # Find the pivot
         while l < r:
             mid = (l + r) // 2

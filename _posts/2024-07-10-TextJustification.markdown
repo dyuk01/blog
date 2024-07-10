@@ -56,7 +56,7 @@ O(n * maxWidth)
 > Loops through the words exactly once, which is O(n). However, since the code iterates through the characters while searching for the empty spaces, the result is O(n * maxWidth)
 
 ## Space Complexity
-O(n)
-> 
+O(N + S)
+> Returns the list of words that depends on the input size, and number of empty spaces that depend on maxWidth
 
 ---

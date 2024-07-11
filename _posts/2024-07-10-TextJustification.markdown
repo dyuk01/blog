@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TextJustification
+title: Text Justification
 date: 2024-07-10
 categories: leetcode python
 ---

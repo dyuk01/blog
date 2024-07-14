@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Triangle
-date: 2024-07-12
+title: MinimumPathSum
+date: 2024-07-13
 categories: leetcode python
 ---
 
 ## Problem
-![alt text](/blog/public/img/Triangle.png)
+![alt text](/blog/public/img/MinimumPathSum.png)
 
 ## Approach
 The goal is to find the minimum path sum, which means we cannot find the absolute minimum of the elements since they must be connected like a binary tree. In order to solve this, we need to utilize multidimensional DP. The basic logic will be adding values between two rows starting from the bottom, and working the way up to the top.

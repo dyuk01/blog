@@ -9,36 +9,36 @@ categories: leetcode python
 ![alt text](/blog/public/img/Combinations.png)
 
 ## Approach
-The goal is to find the minimum path sum, which means we cannot find the absolute minimum of the elements since they must be connected like a binary tree. In order to solve this, we need to utilize multidimensional DP. The basic logic will be adding values between two rows starting from the bottom, and working the way up to the top.
 
-1. Initialize dp as the last index of the triangle
-2. Iterate through the second last triangle to the first index
-3. While iteration, find the minimum of the two rows and store them into dp
 
 ## Code
 ```python
 class Solution(object):
-    def minimumTotal(self, triangle):
+    def combine(self, n, k):
         """
-        :type triangle: List[List[int]]
-        :rtype: int
+        :type n: int
+        :type k: int
+        :rtype: List[List[int]]
         """
-        # Get the last index of the triangle
-        dp = triangle[-1][:]
-        # From the second last row to first row
-        for i in range(len(triangle) - 2, -1, -1):
-            # Iterate through the row's element
-            for j in range(len(triangle[i])):
-                # Compare current number with elements in two children branch, and find the minimum of the sum
-                dp[j] = triangle[i][j] + min(dp[j], dp[j + 1])
-        return dp[0]
+        res = []
+        def backtrack(count, combination, cur):
+            if count == 0:
+                res.append(list(combination))
+            else:
+                for i in range(cur, n + 1):
+                    combination.append(i)
+                    backtrack(count - 1, combination, i + 1)
+                    combination.pop()
+
+        backtrack(k, [], 1)
+        return res
 ```
 ## Time Complexity
-O(n<sup>2</sup>)
-> The first loop of iterating row and second loop of iterating elements make the overall time complexity to O(n<sup>2</sup>)
+O()
+> 
 
 ## Space Complexity
-O(n)
-> Only initializes dp, which stores the elements of the triangle. Resulting in O(n)
+O()
+> 
 
 ---

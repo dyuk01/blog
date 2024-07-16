@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Combinations
-date: 2024-07-14
+date: 2024-07-15
 categories: leetcode python
 ---
 
@@ -22,14 +22,17 @@ class Solution(object):
         """
         res = []
         def backtrack(count, combination, cur):
+            # Combination found
             if count == 0:
                 res.append(list(combination))
             else:
+                # Iterate from 1 to n
                 for i in range(cur, n + 1):
+                    # 
                     combination.append(i)
                     backtrack(count - 1, combination, i + 1)
+                    # Reset combination
                     combination.pop()
-
         backtrack(k, [], 1)
         return res
 ```

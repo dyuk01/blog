@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MergeIntervals
+title: Merge Intervals
 date: 2024-07-18
 categories: leetcode python
 ---

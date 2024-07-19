@@ -9,7 +9,10 @@ MergeIntervals
 ![alt text](/blog/public/img/WordPattern.png)
 
 ## Approach
+We need to compare each character in the pattern with each word in the string s to check if they correspond with each other. This cannot be done separately; their information needs to be accessed each time. To achieve this, we will use two hashmaps to check the word pattern:
 
+1. Map each character in the pattern to a word in the string s.
+2. Map each word in the string s to a character in the pattern.
 
 ## Code
 ```python

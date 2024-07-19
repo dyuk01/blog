@@ -4,7 +4,6 @@ title: Merge Intervals
 date: 2024-07-18
 categories: leetcode python
 ---
-MergeIntervals
 ## Problem
 ![alt text](/blog/public/img/MergeIntervals.png)
 

@@ -4,7 +4,6 @@ title: Summary Ranges
 date: 2024-07-17
 categories: leetcode python
 ---
-
 ## Problem
 ![alt text](/blog/public/img/SummaryRanges.png)
 

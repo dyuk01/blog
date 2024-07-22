@@ -4,7 +4,6 @@ title: Word Pattern
 date: 2024-07-19
 categories: leetcode python
 ---
-MergeIntervals
 ## Problem
 ![alt text](/blog/public/img/WordPattern.png)
 

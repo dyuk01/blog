@@ -8,7 +8,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/SwapNodeInPairs.png)
 
 ## Approach
-The basic approach is similar to the "swapping numbers" method (utilizing variables `a`, `b`, and `temp`). In this case, we apply this logic to the nodes of a linked list.
+The basic approach is similar to the "swapping numbers" method (utilizing variable `temp`). In this case, we apply this logic to the nodes of a linked list
 
 ## Code
 ```python

@@ -25,7 +25,7 @@ class Solution(object):
         """
         res = []
         def dfs(left, right, s):
-            # Return the combination
+            # Maximum length reached. Return the combination
             if len(s) == n*2:
                 res.append(s)
                 return
@@ -40,11 +40,11 @@ class Solution(object):
         return res
 ```
 ## Time Complexity
-O(n + m)
-> 
+O(4<sup>n</sup> / n<sup>3/2</sup>)
+> The time complexity is derived from the n-th <a href="https://en.wikipedia.org/wiki/Catalan_number">Catalan Number</a>, which approximates to 4<sup>n</sup> / n<sup>3/2</sup>
 
 ## Space Complexity
-O(n + m)
-> 
+O(n)
+> The space complexity is determined by the depth of the recursion tree, which is n in the worst case
 
 ---

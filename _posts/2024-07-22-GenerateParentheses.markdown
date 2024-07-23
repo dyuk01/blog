@@ -8,12 +8,11 @@ categories: leetcode python
 ![alt text](/blog/public/img/GenerateParentheses.png)
 
 ## Approach
-The goal is to find all possible combination of the parentheses. In order to find every possible combination, we must use DFS to traverse through the combinations and return the suitable answers.
+The goal is to find all possible combination of the parentheses. In order to find every possible combination, we must use DFS to traverse through the combinations and return the suitable answers. For dfs, we must follow 3 crucial steps:
 
-1. Initialize dfs
-> If the combination reaches its' maximum length (n * 2), return the combination to the answer  
-Add '(' up to n times  
-Add ')' only after '(' exist, and no more than '(' amount
+1. If the combination reaches its' maximum length (n * 2), return the combination to the answer  
+2. Add '(' up to n times  
+3. Add ')' only after '(' exist, and no more than '(' amount
 
 
 ## Code

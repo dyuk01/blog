@@ -8,7 +8,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/SwapNodeInPairs.png)
 
 ## Approach
-The basic approach is similar to the "swapping numbers" method (utilizing variable `temp`). In this case, we apply this logic to the nodes of a linked list
+The basic approach is similar to the "swapping numbers" method (utilizing variable `temp`). In this case, we apply this logic to the nodes of a linked list. Since we cannot start from the initial and have initial.next due to None type, we must initialize from the previous node
 
 ## Code
 ```python
@@ -23,12 +23,13 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        curr_node, curr_node.next = self, head
-        while curr_node.next and curr_node.next.next:
-            a = curr_node.next
+        # Sets previous and its' link
+        prev, prev.next = self, head
+        while prev.next and prev.next.next:
+            a = prev.next
             b = a.next
-            curr_node.next, b.next, a.next = b, a, b.next
-            curr_node = a
+            prev.next, b.next, a.next = b, a, b.next 
+            prev = a
         return self.next
 ```
 ## Time Complexity

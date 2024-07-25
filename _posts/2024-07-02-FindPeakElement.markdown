@@ -37,6 +37,7 @@ class Solution(object):
                 r = mid - 1
         return l
 ```
+
 ## Time Complexity
 O(log(n))
 > Uses binary search to find the result from an array

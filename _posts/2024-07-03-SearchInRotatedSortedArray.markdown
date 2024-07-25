@@ -60,6 +60,7 @@ class Solution(object):
         
         return -1
 ```
+
 ## Time Complexity
 O(log(n))
 > Uses 2 binary search (1st to find the pivot, and 2nd to find the target), which makes the time complexity O(2log(n)) --> O(log(n))

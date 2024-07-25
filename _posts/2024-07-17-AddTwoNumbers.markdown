@@ -44,6 +44,7 @@ class Solution(object):
             res = res.next
         return root.next
 ```
+
 ## Time Complexity
 O(n)
 > Iterates through both list nodes exactly once

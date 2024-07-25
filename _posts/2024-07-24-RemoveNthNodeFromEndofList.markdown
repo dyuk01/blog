@@ -63,6 +63,7 @@ class Solution(object):
 
         return head
 ```
+
 ## Time Complexity
 O(n)
 > The linked list is traversed twice (finding the size, and actually traversing for index adjustment), which results in O(2n). This simplies to O(n)

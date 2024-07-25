@@ -39,6 +39,7 @@ class Solution(object):
         dfs(0,0,'')
         return res
 ```
+
 ## Time Complexity
 O(4<sup>n</sup> / n<sup>3/2</sup>)
 > The time complexity is derived from the n-th <a href="https://en.wikipedia.org/wiki/Catalan_number">Catalan Number</a>, which approximates to 4<sup>n</sup> / n<sup>3/2</sup>

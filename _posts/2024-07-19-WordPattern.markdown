@@ -46,6 +46,7 @@ class Solution(object):
                     return False
         return True
 ```
+
 ## Time Complexity
 O(n + m)
 > Iterates through 2 strings(pattern and s) exactly once, which makes the time complexity the sum of their length

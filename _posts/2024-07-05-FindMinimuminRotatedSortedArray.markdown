@@ -37,6 +37,7 @@ class Solution(object):
         # Return the first element of the array before rotation
         return nums[pivot]
 ```
+
 ## Time Complexity
 O(log(n))
 > Uses binary search for finding the pivot

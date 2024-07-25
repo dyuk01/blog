@@ -51,6 +51,7 @@ class Solution(object):
             num_of_letters += len(w)
         return res + [' '.join(cur).ljust(maxWidth)]
 ```
+
 ## Time Complexity
 O(n * maxWidth)
 > Loops through the words exactly once, which is O(n). However, since the code iterates through the characters while searching for the empty spaces, the result is O(n * maxWidth)

@@ -26,6 +26,7 @@ class Solution(object):
                 grid[i][j] += min(grid[i-1][j], grid[i][j-1])
         return grid[-1][-1]
 ```
+
 ## Time Complexity
 O(n<sup>2</sup>)
 > 

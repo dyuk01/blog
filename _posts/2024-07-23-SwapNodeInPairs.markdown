@@ -32,6 +32,7 @@ class Solution(object):
             prev = a
         return self.next
 ```
+
 ## Time Complexity
 O(n)
 > Iterates through the linked list exactly once

@@ -39,6 +39,7 @@ class Solution(object):
                 l = mid + 1
         return False
 ```
+
 ## Time Complexity
 O(log(n*m))
 > At worst scenario, the algorithm iterates through every row in order to find the target, which results in O(m*n). However, this algorithm uses binary search, which reduces the time complexity to O(log(m*n))

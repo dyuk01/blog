@@ -58,6 +58,7 @@ class Solution(object):
 
         return [l_res, r_res]
 ```
+
 ## Time Complexity
 O(log(n))
 > Uses 2 binary search (1st to find the leftmost index, and 2nd to find the rightmost index), which makes the time complexity O(2log(n)) --> O(log(n))

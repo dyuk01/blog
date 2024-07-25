@@ -33,6 +33,7 @@ class Solution(object):
                 dp[j] = triangle[i][j] + min(dp[j], dp[j + 1])
         return dp[0]
 ```
+
 ## Time Complexity
 O(n<sup>2</sup>)
 > The first loop of iterating row and second loop of iterating elements make the overall time complexity to O(n<sup>2</sup>)

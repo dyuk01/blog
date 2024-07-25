@@ -51,6 +51,7 @@ class Solution(object):
         backtrack("", digits)
         return res
 ```
+
 ## Time Complexity
 O(n * 4<sup>n</sup>)
 > Appending and forming the combination string takes O(n) times. In addition, finding all the possible iterations would take O(4<sup>n</sup>) times due to 4 characters in one number

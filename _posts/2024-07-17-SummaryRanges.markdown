@@ -44,6 +44,7 @@ class Solution(object):
 
         return res
 ```
+
 ## Time Complexity
 O(n)
 > Iterates through the list until the last element

@@ -8,17 +8,13 @@ categories: leetcode python
 ![alt text](/blog/public/img/CombinationSum.png)
 
 ## Approach
-Because we have to find all combinations to form a target number, we will use dfs to find all possible combinations to form the target number
+Because we have to find all combinations to form a target number, we will use dfs to find all possible combinations to form the 'target' number
 
+1. Initialize dfs
+> Consisted of 4 variables. 'candidates', 'target', 'combination', and 'res'  
+'candidates' and 'target' variables are from given problem, 'combination' is a series of numbers that form a 'target' number one set of combination that will be appended to 'res' when correct combination is found
 ## Code
 ```python
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution(object):
-    def removeNthFromEnd(self, head, n):
 class Solution(object):
     def combinationSum(self, candidates, target):
         """
@@ -38,7 +34,6 @@ class Solution(object):
             # Since the combination is ordered, we can safely iterate from the smallest number to the biggest number
             for i in range(len(candidates)):
                 dfs(candidates[i:], target - candidates[i], combination + [candidates[i]], res)
-
         dfs(candidates, target, [], res)
         return res
 ```

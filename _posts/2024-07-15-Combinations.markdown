@@ -28,7 +28,7 @@ class Solution(object):
             else:
                 # Iterate from 1 to n
                 for i in range(cur, n + 1):
-                    # 
+                    # Add one number at a time
                     combination.append(i)
                     backtrack(count - 1, combination, i + 1)
                     # Reset combination

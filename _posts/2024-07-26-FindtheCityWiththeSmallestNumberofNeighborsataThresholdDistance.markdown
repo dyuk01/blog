@@ -8,11 +8,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/FindtheCityWiththeSmallestNumberofNeighborsataThresholdDistance.png)
 
 ## Approach
-Because we have to find all combinations to form a target number, we will use dfs to find all possible combinations to form the 'target' number
-
-1. Initialize dfs
-> Consisted of 4 variables. 'candidates', 'target', 'combination', and 'res'  
-'candidates' and 'target' variables are from given problem, 'combination' is a series of numbers that form a 'target' number one set of combination that will be appended to 'res' when correct combination is found
+We can identify that this problem is utilizing undirected weighted graph in order to find the city with the least path to the cities, given distanceThreshold to limit the distance. I will be using Floyd Warshall Algorithm to find the least
 
 ## Code
 ```python

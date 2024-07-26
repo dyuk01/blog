@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Find the City With the Smallest Number of Neighbors at a Threshold Distance
-date: 2024-07-25
+date: 2024-07-26
 categories: leetcode python
 ---
 ## Problem

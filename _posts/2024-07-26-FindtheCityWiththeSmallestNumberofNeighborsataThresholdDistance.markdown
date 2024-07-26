@@ -43,7 +43,7 @@ class Solution(object):
             for j in range(n):
                 # Destination Node
                 for k in range(n):
-                    # Find the shortest distance between the nodes
+                    # Find the shortest distance between the src and dest node, and store it into the 2d matrix
                     path_length = dist[j][i] + dist[i][k]
                     if path_length < dist[j][k]:
                         dist[j][k] = path_length

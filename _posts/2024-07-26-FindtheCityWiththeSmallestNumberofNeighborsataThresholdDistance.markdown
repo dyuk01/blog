@@ -8,7 +8,13 @@ categories: leetcode python
 ![alt text](/blog/public/img/FindtheCityWiththeSmallestNumberofNeighborsataThresholdDistance.png)
 
 ## Approach
-We can identify that this problem is utilizing undirected weighted graph in order to find the city with the least path to the cities, given distanceThreshold to limit the distance. I will be using Floyd Warshall Algorithm to find the least
+We can identify that this problem is utilizing an undirected weighted graph in order to find the city with the fewest paths to other cities, given a distance threshold to limit the distance. I will be using the Floyd-Warshall Algorithm to find a city with the least number of neighbors.
+
+1. Initialize distance with infinity
+2. Set distance for each node to itself
+3. Set initial distances based on edges
+4. Floyd-Warshall Algorithm
+5. Determine the city with the smallest number of neighbors within the threshold
 
 ## Code
 ```python
@@ -21,32 +27,31 @@ class Solution(object):
         :rtype: int
         """
         dist = [[float('inf')] * n for _ in range(n)]
+
         # Initialize Node
         for node in range(n):
             dist[node][node] = 0
-        # Set the values for the nodes
-        for source, dest, weight in edges:
-            dist[source][dest] = weight
-            dist[dest][source] = weight
-        
-        # Pivot
+        # Information set
+        for src, dest, weight in edges:
+            dist[src][dest] = weight
+            dist[dest][src] = weight
+        # Pivot Node
         for i in range(n):
-            # Node 1
+            # Source Node
             for j in range(n):
-                # Node 2
+                # Destination Node
                 for k in range(n):
-                    # Calculates distance from pivot to node 2
-                    dist_total = dist[j][i] + dist[i][k]
-                    # Found minimum path
-                    if dist_total < dist[j][k]:
-                        dist[j][k] = dist_total
-                        dist[k][j] = dist_total
-        
+                    # Find the shortest distance between the nodes
+                    path_length = dist[j][i] + dist[i][k]
+                    if path_length < dist[j][k]:
+                        dist[j][k] = path_length
+                        dist[k][j] = path_length
+
+        # Find the least neighboring city
         min_city, min_path = None, float('inf')
         for node1 in range(n):
             node1_path = 0
             for node2 in range(n):
-                # Found min_path
                 if dist[node1][node2] <= distanceThreshold:
                     node1_path += 1
             if node1_path <= min_path:
@@ -54,17 +59,14 @@ class Solution(object):
                 min_path = node1_path
         
         return min_city
-        
-
-        
 ```
 
 ## Time Complexity
-O(n)
-> 
+O(n<sup>3</sup>)
+> Uses 3 for loop(pivot, source, and destination node iteration) throughout the algorithm
 
 ## Space Complexity
-O(1)
-> 
+O(n<sup>2</sup>)
+> Initializes 'dist' which makes a 2D matrix for the possible weights between the cities
 
 ---

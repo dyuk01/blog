@@ -14,6 +14,8 @@ We can identify that this problem is utilizing an undirected weighted graph in o
 2. Set distance for each node to itself
 3. Set initial distances based on edges
 4. Floyd-Warshall Algorithm
+> - Use each node as an intermediate point and update the distance matrix to find the shortest paths between every pair of nodes  
+- If a shorter path is found through an intermediate node, update the distance accordingly
 5. Determine the city with the smallest number of neighbors within the threshold
 
 ## Code

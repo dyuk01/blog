@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Minimum Remove to Make Valid Parentheses
-date: 2024-07-27
+date: 2024-07-28
 categories: leetcode python
 ---
 ## Problem
-![alt text](/blog/public/img/RotateImage.png)
+![alt text](/blog/public/img/MinimumRemovetoMakeValidParentheses.png)
 
 ## Approach
 We can identify that this problem is utilizing an undirected weighted graph in order to find the city with the fewest paths to other cities, given a distance threshold to limit the distance. I will be using the Floyd-Warshall Algorithm to find a city with the least number of neighbors.

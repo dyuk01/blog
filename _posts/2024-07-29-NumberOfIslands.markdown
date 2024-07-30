@@ -8,7 +8,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/NumberOfIslands.png)
 
 ## Approach
-
+To solve the problem of counting the number of islands in a grid, we can use DFS method. An island can be identified by connecting adjacent lands horizontally or vertically. We need to traverse each cell in the grid and start a DFS whenever we encounter land ('1'). The DFS will mark all the connected land cells as visited. By counting the number of times we start a DFS, we can determine the number of islands.
 
 ## Code
 ```python

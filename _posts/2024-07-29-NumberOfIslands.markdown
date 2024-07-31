@@ -53,11 +53,11 @@ class Solution(object):
 ```
 
 ## Time Complexity
-O(n)
-> Initializes a list, iterates the string twice(from left to right, and right to left), and joins the string all together which results in O(4n). This simplifies to O(n)
+O(n * m)
+> Traverses through each cell and marks visited/unvisited. This process takes O(n*m)
 
 ## Space Complexity
-O(n)
-> Converts string elements into a list
+O(n * m)
+> If the entire grid is filled with land('1'), dfs will traverse through each grid and have a recursion depth of O(n*m)
 
 ---

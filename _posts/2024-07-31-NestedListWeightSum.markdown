@@ -14,7 +14,8 @@ For dfs, we need to make sure:
 1. If each element is a list or an integer
 > .isInteger() function will distinguish the elements
 
-2. If it is, we can add the integer to the sum with its depth, or we can traverse to another list with incremented depth
+2. If the element is integer, we can add the integer to the sum with its depth
+3. If the element is a list, we can traverse to another list with incremented depth
 
 ## Code
 ```python

@@ -8,7 +8,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/NumberOfSeniorCitizens.png)
 
 ## Approach
-
+The only information that matters within the given detail is the two numbers after a character. Since the details' length is 15, we can safely hard-code the age's index (11, 12)
 
 ## Code
 ```python
@@ -18,6 +18,10 @@ class Solution(object):
         :type details: List[str]
         :rtype: int
         """
+        '''
+        First attempt of solving the problem.
+        1. Although this returns the right answer, its' time complexity (O(2n)), and space complexity (O(n)) are inferior to the new answer
+        '''
         # ans = 0
         # res = [item[11:13] for item in details]
         # for age in res:
@@ -34,10 +38,10 @@ class Solution(object):
 
 ## Time Complexity
 O(n)
-> Iterates through the nested list exactly once
+> Iterates through the array exactly once
 
 ## Space Complexity
 O(1)
-> 
+> Returns
 
 ---

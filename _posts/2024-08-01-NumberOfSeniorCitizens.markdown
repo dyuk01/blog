@@ -42,6 +42,6 @@ O(n)
 
 ## Space Complexity
 O(1)
-> Returns
+> Initializes and returns an int variable, which has fixed memory size
 
 ---

@@ -8,6 +8,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/DotProductofTwoSparseVectors.png)
 
 ## Approach
+Although the problem is expressed as vectors, the basic concept is utilizing two arrays to produce a product sum. To simply utilize two arrays at once, we will use zip function to calculate at once
 
 ## Code
 ```python
@@ -25,14 +26,12 @@ class SparseVector:
         :type vec: 'SparseVector'
         :rtype: int
         """
-        '''
-        self 
-        '''
-        ans = 0
-        for i, n in zip(self.nums, vec.nums):
-            if i:
-                ans += i * n
-        return ans
+        res = 0
+        for n, m in zip(self.nums, vec.nums):
+            # If the number is not zero
+            if n:
+                res += n * m
+        return res
         
 
 # Your SparseVector object will be instantiated and called as such:

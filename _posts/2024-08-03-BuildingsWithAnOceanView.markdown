@@ -1,50 +1,41 @@
 ---
 layout: post
-title: Dot Product of Two Sparse Vectors
+title: Buildings With An Ocean View
 date: 2024-08-03
 categories: leetcode python
 ---
 ## Problem
-![alt text](/blog/public/img/DotProductofTwoSparseVectors.png)
+![alt text](/blog/public/img/BuildingsWithAnOceanView.png)
 
 ## Approach
 
 ## Code
 ```python
-class SparseVector:
-    def __init__(self, nums):
+class Solution(object):
+    def findBuildings(self, heights):
         """
-        :type nums: List[int]
+        :type heights: List[int]
+        :rtype: List[int]
         """
-        self.nums = nums
-
-
-    # Return the dotProduct of two sparse vectors
-    def dotProduct(self, vec):
-        """
-        :type vec: 'SparseVector'
-        :rtype: int
-        """
-        res = 0
-        for n, m in zip(self.nums, vec.nums):
-            # If the number is not zero
-            if n:
-                res += n * m
+        res = []
+        max = -1
+        # Since ocean is on the right, we iterate from the right to left to find out ocean view building
+        for i in range(len(heights) - 1, -1, -1):
+            # Taller building found
+            if heights[i] > max:
+                res.append(i)
+                max = heights[i]
+        # Since list has to be sorted, sort the list
+        res.sort()
         return res
-        
-
-# Your SparseVector object will be instantiated and called as such:
-# v1 = SparseVector(nums1)
-# v2 = SparseVector(nums2)
-# ans = v1.dotProduct(v2)
 ```
 
 ## Time Complexity
-O(n)
-> Iterates through the array exactly once
+O(nlogn)
+> Iterates through the array exactly once, but sorts the array which is O(nlogn)
 
 ## Space Complexity
-O(1)
-> Initializes and returns an int variable, which has fixed memory size
+O(n)
+> 
 
 ---

@@ -8,7 +8,8 @@ categories: leetcode python
 ![alt text](/blog/public/img/MeetingRooms2.png)
 
 ## Approach
-
+With given time intervals, we need to identify any overlapping intervals for determining the number of rooms required for the meetings.  
+Initially, two pointer approach is what came to my mind, but I quickly realized utilizing min-heap will simplify the code by a significant amount compared to two pointer. Although they both have O(nlogn), the code becomes significantly longer for two pointers since I have to manually initialize start and end times and compare them individually
 
 ## Code
 ```python
@@ -37,6 +38,6 @@ O(nlogn)
 
 ## Space Complexity
 O(n)
-> If every intervals' time occupy within themselves, there has to be n rooms
+> If all meetings' interval overlaps, there has to be n rooms
 
 ---

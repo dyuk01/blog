@@ -8,6 +8,9 @@ categories: leetcode python
 ![alt text](/blog/public/img/MergeNodesInBetweenZeros.png)
 
 ## Approach
+1. Iterate through the list
+2. While iteration, make sum of the values between 0
+3. Link the sum with the current node, and the next node as the number after 0
 
 ## Code
 ```python
@@ -32,9 +35,9 @@ class Solution(object):
             while next_sum.val != 0:
                 sum += next_sum.val
                 next_sum = next_sum.next
+            # Changes the current node to sum, and links the next node to the node after 0
             modify.val = sum
             next_sum = next_sum.next
-
             modify.next = next_sum
             modify = modify.next
         return head.next

@@ -8,7 +8,14 @@ categories: leetcode python
 ![alt text](/blog/public/img/MergeNodesInBetweenZeros.png)
 
 ## Approach
+The main approach is to find the minimum number between the current column and row. Then, move the grid to the greater number
 
+1. Initailize 2D matrix with 0
+2. Find the minimum number between column and row
+3. Subtract the number from both side
+4. Move the grid toward the number that is not 0
+> Move toward greater number
+5. Repeat until all conditions match
 
 ## Code
 ```python
@@ -26,6 +33,7 @@ class Solution(object):
 
         while i < row_sum and j < col_sum:
             res[i][j] = min(rowSum[i], colSum[j])
+            # Finds the minimum number, and subtracts the minimum number from the greater number. Also, grid moves towards the greater number
             if rowSum[i] == colSum[j]:
                 i += 1
                 j += 1
@@ -41,7 +49,7 @@ class Solution(object):
 
 ## Time Complexity
 O(m * n)
-> 
+> In worst case scenario, the algorithm will iterate through every grid in order to meet input's condition
 
 ## Space Complexity
 O(m * n)

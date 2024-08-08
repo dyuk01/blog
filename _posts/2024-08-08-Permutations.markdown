@@ -8,36 +8,58 @@ categories: leetcode python
 ![alt text](/blog/public/img/Permutations.png)
 
 ## Approach
+The goal is to find the pattern of the spiral.
 
+1. Spiral spins clock-wise
+2. Length of spiral increments by 1 every 2 turn
+3. Direction is always in order : East, South, West, North
+4. Spiral needs to be happening even if the spiral goes out of bound
 
+With these patterns in mind, we only need to implement the steps into code
 ## Code
 ```python
 class Solution(object):
-    def permute(self, nums):
+    def spiralMatrixIII(self, rows, cols, rStart, cStart):
         """
-        :type nums: List[int]
+        :type rows: int
+        :type cols: int
+        :type rStart: int
+        :type cStart: int
         :rtype: List[List[int]]
         """
-        def dfs(self, nums, path, res):
-            if not nums:
-                res.append(path[:])
-                return
-                
-            for i, num in enumerate(nums):
-                path.append(num)
-                dfs(self, nums[:i] + nums[i + 1:], path, res)
-                path.pop()
-
+        # East, South, West, North
+        dir = [[0,1], [1,0], [0,-1], [-1,0]]
         res = []
-        dfs(self, nums, [], res)
+        # Start from East
+        direction = 0
+        # Number of moves
+        step = 1
+        repeat = 2
+        # Out of Bound check
+        while len(res) < rows * cols:
+            # Length of move increments after 2 moves
+            for _ in range(repeat):
+                # Validating each step
+                for _ in range(step):
+                    if (
+                        rStart >= 0
+                        and rStart < rows
+                        and cStart >= 0
+                        and cStart < cols
+                    ):
+                        res.append([rStart,cStart])
+                    rStart += dir[direction][0]
+                    cStart += dir[direction][1]
+                direction = (direction + 1) % 4
+            step += 1 
         return res
 ```
 
 ## Time Complexity
-O(n!)
-> 
+O(n * m)
+> Iterates through every element in a 2D matrix
 
 ## Space Complexity
-O(n)
-> 
+O(n * m)
+> Initializes and returns every element in a 2D matrix
 ---

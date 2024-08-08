@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Merge Nodes In Between Zeros
-date: 2024-08-06
+title: Find Vali Matrix Given Row And Given Column Sums
+date: 2024-08-07
 categories: leetcode python
 ---
 ## Problem
-![alt text](/blog/public/img/MergeNodesInBetweenZeros.png)
+![alt text](/blog/public/img/FindValidMatrixGivenRowAndGivenColumnSums.png)
 
 ## Approach
 The main approach is to find the minimum number between the current column and row. Then, move the grid to the greater number

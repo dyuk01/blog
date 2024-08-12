@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Floyd's Cycle Finding Algorithm
-date: 2024-06-??
+date: 2024-08-31
 categories: algorithm
 ---
 ## Definition

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection Sort
-date: 2024-0?-??
+date: 2024-08-31
 categories: algorithm
 ---
 ## Problem

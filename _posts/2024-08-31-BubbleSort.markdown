@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bubble Sort
-date: 2024-0?-??
+date: 2024-08-31
 categories: algorithm
 ---
 ## Problem

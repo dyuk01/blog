@@ -1,0 +1,45 @@
+---
+layout: post
+title: Subsets
+date: 2024-08-12
+categories: leetcode python
+---
+## Problem
+![alt text](/blog/public/img/Subsets.png)
+
+## Approach
+The goal is to find the pattern of the spiral.
+
+1. Spiral spins clock-wise
+2. Length of spiral increments by 1 every 2 turn
+3. Direction is always in order : East, South, West, North
+4. Spiral needs to be happening even if the spiral goes out of bound
+
+With these patterns in mind, we only need to implement the steps into code
+## Code
+```python
+class Solution(object):
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        res = []
+
+        def dfs(nums, path, res):
+            res.append(path)
+            for i in range(len(nums)):
+                dfs(nums[i + 1:], path + [nums[i]], res)
+            
+        dfs(nums, [], res)
+        return res
+```
+
+## Time Complexity
+O(n * m)
+> Iterates through every element in a 2D matrix
+
+## Space Complexity
+O(n * m)
+> Initializes and returns every element in a 2D matrix
+---

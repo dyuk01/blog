@@ -9,8 +9,6 @@ categories: leetcode python
 
 ## Approach
 
-
-With these patterns in mind, we only need to implement the steps into code
 ## Code
 ```python
 class Solution(object):

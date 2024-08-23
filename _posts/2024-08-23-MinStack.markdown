@@ -8,7 +8,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/MinStack.png)
 
 ## Approach
-
+The problem is just asking for the basic functionalities for a stack. However, implementing getMin() with a time complexity of O(n) prevents us from just initializing a stack. Since we cannot use min() due to its time complexity(O(n)), we must initialize another stack just for storing minimum numbers
 
 ## Code
 ```python
@@ -65,11 +65,11 @@ class MinStack(object):
 ```
 
 ## Time Complexity
-O(n)
-> Iterates through the list exactly once
+O(1)
+> Utilizes basic stack functionalities that adds or removes the top element from the stack
 
 ## Space Complexity
 O(n)
-> Initializes stack with 
+> Initializes 2 stacks (O(2n)) that can be the same length with each other if the numbers pushed are minimum numbers every time
 
 ---

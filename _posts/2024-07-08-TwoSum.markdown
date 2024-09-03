@@ -1,0 +1,50 @@
+---
+layout: post
+title: Two Sum
+date: 2024-07-08
+categories: leetcode python
+---
+
+## Problem
+![alt text](/blog/public/img/TwoSum.png)
+
+## Approach
+It would be easy to solve the question by choosing the answer from all the possible answers with using nested for loop. However, the time complexity would be O(n<sup>2</sup>), which is not ideal. Instead, using two pointers or hashmap to figure out the answer would be better solution since their time complexity would be O(nlogn) or O(n). Since using hashmap is the most optimal in time complexity wise, I will be using hashmap in order to solve this problem.
+
+1. Initialize hashmap
+2. Because the problem stated that there always is a solution, target subtracted by a number has to equal another number. This can be translated to an equation: target - num1 = num2
+3. Using hashmap, store the number if the two numbers are not two sum, and return if it is
+
+## Code
+```python
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        # Hashmap to store number and its index
+        res = {}
+
+        for i in range(len(nums)):
+            # If num1 + num2 = target exists,
+            if target - nums[i] in res:
+                # Return its index
+                return [res[target - nums[i]], i]
+            # If not, store the index into the hashmap
+            res[nums[i]] = i
+        # Since the problem guarantees there is an answer, return a placeholder
+        return []
+        
+```
+
+## Time Complexity
+O(n)
+> Iterates through the array exactly once in order to find the two sum
+
+## Space Complexity
+O(n)
+> As input size increases, the amount of integers that the hashmap needs to store increases as well
+
+---

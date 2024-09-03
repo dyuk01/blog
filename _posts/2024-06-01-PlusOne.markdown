@@ -1,0 +1,41 @@
+---
+layout: post
+title: Plus One
+date: 2024-06-01
+categories: leetcode python
+---
+
+## Problem
+![alt text](/blog/public/img/PlusOne.png)
+
+## Approach
+Because the digit is not an int but a series of characters within an array, we cannot simply add 1 to the input. Instead, we have to check through each character and manually select each number. Special case scenario would be when the default digit is 9. Since we cannot have 10 to be new digit, we have add 1 to the first index of the array.
+
+## Code
+```python
+class Solution(object):
+    def plusOne(self, digits):
+        # Find the maximum length of a digit
+        length = len(digits) - 1
+        # Determine any 9s that should be incremeneted to 0 
+        while digits[length] == 9:
+            digits[length] = 0
+            length -= 1
+        # If the first digit ends with 9 and should be incremented to 10, append 1 at front
+        if(length < 0):
+            digits = [1] + digits
+        # Just a normal digit that the last digit should be incremented
+        else:
+            digits[length] += 1
+        return digits
+```
+
+## Time Complexity
+O(n)
+> Worst scenario would be all digits with 9, which the loop has to iterate through every digit
+
+## Space Complexity
+O(n)
+> Maximum size is 1 + n (digit length), which is O(n) 
+
+---

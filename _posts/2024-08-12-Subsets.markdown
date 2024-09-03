@@ -1,0 +1,38 @@
+---
+layout: post
+title: Subsets
+date: 2024-08-12
+categories: leetcode python
+---
+## Problem
+![alt text](/blog/public/img/Subsets.png)
+
+## Approach
+
+## Code
+```python
+class Solution(object):
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        res = []
+
+        def dfs(nums, path, res):
+            res.append(path)
+            for i in range(len(nums)):
+                dfs(nums[i + 1:], path + [nums[i]], res)
+            
+        dfs(nums, [], res)
+        return res
+```
+
+## Time Complexity
+O(2<sup>n</sup>)
+> 
+
+## Space Complexity
+O(2<sup>n</sup>)
+> 
+---

@@ -2,7 +2,7 @@
 layout: post
 title: Integer to Roman
 date: 2024-05-20
-categories: leetcode String/Array python medium
+categories: leetcode python
 ---
 ## Problem
 ![alt text](/blog/public/img/IntegertoRoman.png)
@@ -15,6 +15,7 @@ This is a brute-force algorithm that checks every possible value for an int to b
 1. Check if the input number is greater than the highest number in the table(1000), then translate it to the character.  
 2. Repeat the step until you have no numbers
 
+## Code
 ```python
 class Solution:
     def intToRoman(self, num: int):

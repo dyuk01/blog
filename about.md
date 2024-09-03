@@ -10,4 +10,4 @@ permalink: /about/
 
 - <a href="https://github.com/dyuk01">Github</a>
 - <a href="https://dyuk01.github.io/main/">Portfolio</a>
-- <a href="https://www.linkedin.com/in/peter-yuk-a3aba3254/">LinkedIn</a>
+- <a href="https://www.linkedin.com/in/dokyung-yuk-a3aba3254/">LinkedIn</a>

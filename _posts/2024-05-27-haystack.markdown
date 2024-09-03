@@ -2,7 +2,7 @@
 layout: post
 title: Find the Index of the First Occurrence in a String
 date: 2024-05-27
-categories: leetcode String/Array python easy
+categories: leetcode python
 ---
 
 ## Problem
@@ -37,6 +37,7 @@ I can successfully return the initial index of the word that I am looking for in
 ```python
 class Solution(object):
     def strStr(self, haystack, needle):
+        # Finds the word and returns the index of first occurence of the word
         return haystack.find(needle)
 ```
 

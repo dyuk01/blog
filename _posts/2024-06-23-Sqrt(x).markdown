@@ -1,0 +1,81 @@
+---
+layout: post
+title: Sqrt(x)
+date: 2024-06-23
+categories: leetcode python
+---
+
+## Problem
+![alt text](/blog/public/img/Sqrt(x).png)
+
+## Approach
+The goal is to find the squared root of a given number without using any power function. My original approach was to
+
+1. Take care of the base cases (when the number is less than 4)
+2. Because the squared root of a number can't be more than x/2, use for loop to iterate from 1 to x/2
+3. If a number is decimal, round down
+
+```python
+class Solution(object):
+    def mySqrt(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        # Base cases for numbers less than sqrt(4), which is 2
+        if x == 0:
+            return 0
+        elif x < 4:
+            return 1
+        res = num = 0
+        # Iterate from 1 to x/2
+        for num in range(1, x // 2 + 1):
+            # Found sqrt(x)
+            if num * num >= x:
+                res = num
+                break
+        # Round down if necessary
+        if num * num > x:
+            res -= 1
+        return res
+```
+However, this did not work when met with an extreme edge case of "2147395599" causing overflow. This means that I have to reduce the iterations, which I decided to use binary search.
+
+## Code
+Using binary search will successfully reduce the iterations, which will safely take any input values regardless of their size.
+
+1. Find out the mean of 2 int values
+2. If mean value is less than sqrt(x), reduce the lower half
+3. If mean value is greater than sqrt(x), reduce the upper half
+4. After the iterations, sqrt(x) will be found
+
+```python
+class Solution(object):
+    def mySqrt(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        l, r = 0, x
+        # Perform binary search to find out sqrt(x)
+        while l <= r:
+            mid = (l + r)) // 2
+            # Found sqrt(x)
+            if mid * mid <= x < (mid + 1) * (mid + 1):
+                return mid
+            # Number greater than sqrt(x). Reduce the upper half
+            elif mid * mid > x:
+                r = mid - 1
+            # Number less than sqrt(x). Reduce the lower half
+            else:
+                l = mid + 1
+```
+## Time Complexity
+O(logn)
+> Performs binary search, which reduces the iterations to O(logn)
+
+## Space Complexity
+O(1)
+> Returns an integer which is an fixed variable
+
+---

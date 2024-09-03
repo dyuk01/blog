@@ -1,0 +1,75 @@
+---
+layout: post
+title: Min Stack
+date: 2024-08-23
+categories: leetcode python
+---
+## Problem
+![alt text](/blog/public/img/MinStack.png)
+
+## Approach
+The problem is just asking for the basic functionalities for a stack. However, implementing getMin() with a time complexity of O(n) prevents us from just initializing a stack. Since we cannot use min() due to its time complexity(O(n)), we must initialize another stack just for storing minimum numbers
+
+## Code
+```python
+class MinStack(object):
+
+    def __init__(self):
+        # Initializes stack and min_stack for only adding minimum numbers
+        self.stack = []
+        self.min_stack = []
+
+    def push(self, val):
+        """
+        :type val: int
+        :rtype: None
+        """
+        # Only push minimum number to min_stack, and add any number into the stack
+        self.stack.append(val)
+        if not self.min_stack or val <= self.min_stack[-1]:
+            self.min_stack.append(val)
+
+    def pop(self):
+        """
+        :rtype: None
+        """
+        # Remove the top number in stack, and remove the top minimum number if the value is identical from min_stack
+        if self.stack:
+            val = self.stack.pop()
+            if val == self.min_stack[-1]:
+                self.min_stack.pop()
+            return val        
+
+    def top(self):
+        """
+        :rtype: int
+        """
+        return self.stack[-1]
+
+    def getMin(self):
+        """
+        :rtype: int
+        """
+        # Finds the minimum
+        if self.min_stack:
+            return self.min_stack[-1]
+        
+
+
+# Your MinStack object will be instantiated and called as such:
+# obj = MinStack()
+# obj.push(val)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()
+```
+
+## Time Complexity
+O(1)
+> Utilizes basic stack functionalities that adds or removes the top element from the stack
+
+## Space Complexity
+O(n)
+> Initializes 2 stacks (O(2n)) that can be the same length with each other if the numbers pushed are minimum numbers every time
+
+---

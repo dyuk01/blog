@@ -1,0 +1,80 @@
+---
+layout: post
+title: Walking in the Park
+date: 2024-06-14
+categories: programmers python
+---
+
+## Problem
+![alt text](/blog/public/img/Park.png)
+
+## Translation
+The problem involves a robot dog navigating through a rectangular grid park represented by 'O' for walkable paths and 'X' for obstacles. The robot dog follows a list of commands given in the format:  
+["direction distance", "direction distance" … ]  
+For example, "E 5" means the robot dog moves 5 steps east from its current position. Before executing each command, the robot dog checks two conditions:  
+1. Whether the movement will cause it to go out of the park boundaries.
+2. Whether there are obstacles in the path during the movement.
+
+If either condition is met, the robot dog ignores that command and proceeds to the next one. The park has a width W and height H, with the top-left corner at (0, 0) and the bottom-right corner at (H - 1, W - 1).
+![alt text](/blog/public/img/ParkImage.png)
+
+Given the string array park representing the park layout and the string array routes containing the commands, implement the function solution to return the final position of the robot dog in the format [row, column].
+
+## Approach
+1. Identify starting position from the park layout.
+2. Update position only if the movement is valid.
+3. Return the final position of the robot dog.
+
+## Code
+```python
+def start_pos(park):
+    # Finds the starting position
+    for i in range(len(park)):
+        for j in range(len(park[i])):
+            if park[i][j] == 'S':
+                y = i
+                x = j
+                return j,i
+            
+def solution(park, routes):
+    coord = {
+        'E' : [0,1],
+        'W' : [0,-1],
+        'S' : [1,0],
+        'N' : [-1,0]
+    }
+    x, y = start_pos(park)
+    new_x = x
+    new_y = y
+    park_length = len(park[0]) - 1
+    park_width = len(park) - 1
+    
+    # Returns the position of the dog after the routes
+    for r in routes:
+        index = 0
+        direction = r[0] 
+        move = int(r[2])
+        while index < move:
+            new_x += coord[direction][1]
+            new_y += coord[direction][0]
+            index += 1
+            if (0 > new_x or new_x > park_length or 
+                0 > new_y or new_y > park_width or
+                park[new_y][new_x] == 'X'):
+                new_x = x
+                new_y = y
+                break
+        x = new_x
+        y = new_y 
+    return [new_y, new_x]
+```
+
+## Time Complexity
+O(n<sup>2</sup>)
+> Searching for starting point's coordinate needs to check every single space in 2d matrix
+
+## Space Complexity
+O(1)
+> Initializing variables throughout the algorithm only takes fixed amount of space (int variables)
+
+---

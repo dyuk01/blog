@@ -1,0 +1,29 @@
+---
+layout: post
+title: Find other IP addresses within local network using nmap
+date: 2024-06-05
+categories: security manual mac
+---
+
+## Procedure
+1. Download nmap library using terminal
+```bash
+pip3 install python-nmap
+```
+2. Download the <a href="https://nmap.org/download" target="_blank">nmap package</a> as well. Since this package does not get recognized by mac itself, user must allow the application to download from System Settings > Privacy & Security > Security.
+3. First, user can recognize their own IP address via the command below.
+```bash
+ipconfig getifaddr en0  
+```
+4. Then, acquire the first 6 letters from the given IP address. If address was given as xxx.xxx.xx.xxx for example, acquire first 6 digits and type the command below.
+```bash
+nmap -sP xxx.xxx.0.0/24  
+```  
+-sP : "Ping Scan" option that nmap sends ping to determine which hosts are up on the designated network.  
+/24 : Type of <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" target="_blank">CIDR</a> notation, which represents subnet mask of 255.255.255.0. This means the command will scan all 256 IP address of the designated IP address
+5. The following command is given to see the MAC address for each corresponding IP address for device.
+```bash
+arp -a
+```  
+
+---

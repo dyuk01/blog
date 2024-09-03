@@ -83,24 +83,29 @@ code {
 	display: flex;
 	justify-content: space-between;
 	flex-flow: row nowrap;
-}
 
 .content {
-	/*margin-left: 180px;*/
-	flex: 1 1 auto;
-	padding: 0px 30px;
+    margin-left: 150px; /* Adjust according to the new sidebar width */
+    flex: 1 1 auto;
+    padding: 0px 30px;
 }
 
 .sidebar {
-	/*position: fixed;*/
-	display: flex;
-	flex-flow: column nowrap;
-	flex: 0 0 220px;
-	padding: 15px;
-	z-index: 1;
-	background-color: #222;
-	color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 220px;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 15px;
+    z-index: 1;
+    background-color: #222;
+    color: #fff;
+    overflow-x: hidden; /* Optional: Hide horizontal scrollbar */
+    overflow-y: hidden; /* Optional: Add vertical scrollbar if needed */
 }
+
 
 .sidebar-item {
 	display: block;

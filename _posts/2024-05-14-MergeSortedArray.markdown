@@ -2,7 +2,7 @@
 layout: post
 title: Merge Sorted Array
 date: 2024-05-14
-categories: leetcode String/Array python easy
+categories: leetcode python
 ---
 ## Problem
 ![alt text](/blog/public/img/MergeSortedArray.png)

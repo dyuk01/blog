@@ -1,0 +1,94 @@
+---
+layout: post
+title: 3Sum
+date: 2024-06-17
+categories: leetcode python
+---
+
+## Problem
+![alt text](/blog/public/img/3Sum.png)
+
+## Approach
+This problem is a type of <a href="https://www.geeksforgeeks.org/window-sliding-technique/" target="_blank">two pointers</a> problem, but it has 3 pointers to consider. At first, I wanted to complete the algorithm with time complexity of O(n), but soon realized I need 2 loops for i and j.
+
+## Code
+```python
+class Solution(object):
+    def threeSum(self, nums):
+        """
+        This algorithm only works if there are only one solution for each numbers. For example, if there nums(input) = [-2,0,1,1,2], the correct answer would be [[-2,0,2],[-2,1,1]]. However, this code cannot find the second answer, since it only checks for the first answer and moves on.
+        """
+        res = []
+        nums.sort()
+        i = 0
+        while i < len(nums) - 2:
+            j = i + 1
+            k = len(nums) - 1
+            # If the sum is greater than 0, decrement the right pointer (k)
+            if nums[i] + nums[j] + nums[k] > 0:
+                k -= 1
+            # If the sum is less than 0, increment the left pointer (j)
+            elif nums[i] + nums[j] + nums[k] < 0:
+                j += 1
+            # Prevents overlapping pointers
+            if i == j or i == k or j == k:
+                i += 1
+                continue
+            threeSum = nums[i] + nums[j] + nums[k]
+            # Answer found
+            if threeSum == 0:
+                if [nums[i],nums[j],nums[k]] not in res:
+                    res.append([nums[i],nums[j],nums[k]])
+            i += 1
+        return res
+```
+
+## Solution
+Using a nested for loop for i(fixed pointer) and j(left pointer), we can iterate through each array for i in order to find the sum of 0. There is 2 aspects that is essential for this problem, which is:  
+
+1. Fix the position of i, which will leave us with two pointers problem
+2. Avoid duplicates and overlapping pointers
+
+```python
+class Solution(object):
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        res = []
+        nums.sort()
+        for i in range(len(nums) - 2):
+            # Avoid Duplicates & Meaningless Iteration
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
+            j = i + 1
+            k = len(nums) - 1
+            # Avoid Overlapping Pointers
+            while j < k:
+                threeSum = nums[i] + nums[j] + nums[k]
+                # Decrement Right Pointer
+                if threeSum > 0:
+                    k -= 1
+                # Increment Left Pointer
+                elif threeSum < 0:
+                    j += 1
+                # Found Answer
+                else:
+                    # Check for duplicate
+                    if [nums[i], nums[j], nums[k]] not in res:
+                        res.append([nums[i], nums[j], nums[k]])
+                    j += 1
+                    k -= 1
+        return res
+```
+
+## Time Complexity
+O(n<sup>2</sup>)
+> The algorithm has nested for loop (i for isolating index, and j for incrementing through the array). Although sort function has O(nlogn),the nested for loop O(n<sup>2</sup>) dominates O(nlogn)
+
+## Space Complexity
+O(n)
+> Initializing the 'res' variable takes up to O(n) (If all unique values have sum of 0).
+
+---

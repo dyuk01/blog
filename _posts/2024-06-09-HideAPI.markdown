@@ -1,0 +1,48 @@
+---
+layout: post
+title: How to hide API keys
+date: 2024-06-09
+categories: manual
+---
+
+## When to use
+Whenever utilizing keys--such as API or openAI source--to use in open-source/public projects, we need to make sure no one else can access the keys to prevent any damage.
+
+## Procedure
+
+1. Make .gitignore file
+> This tells github to ignore the noted files  
+
+2. Create a file('config.py') that contains API keys.
+> Does not have to be config.py. Freely rename the file  
+
+```python
+# .gitignore should include reference to config.py
+api_key = "YOUR_KEY"
+api_secret = "YOUR_SECRET"
+access_token = "YOUR_ACCESS_TOKEN"
+token_secret = "YOUR_TOKEN_SECRET"
+```
+
+3. Write the file name that you want to ignore in .gitignore file
+
+```bash
+config.py
+```
+
+4. Import the api_key to the main project
+
+```python
+import config
+
+api_key = config.api_key
+```
+
+5. If the hidden files are still shown in Github, navigate to your local github file and type the following script (Commmit any changes before running)
+
+```bash
+git rm -rf --cached .
+git add .
+```
+
+---

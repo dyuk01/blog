@@ -30,10 +30,10 @@ class Solution(object):
 
 ## Time Complexity
 O(n)
-> 
+> Iterates through the list exactly once
 
 ## Space Complexity
 O(n)
-> 
+> Initializes stack with 
 
 ---

@@ -36,6 +36,6 @@ O(nlogn)
 
 ## Space Complexity
 O(n)
-> 
+> Returns an array with 
 
 ---

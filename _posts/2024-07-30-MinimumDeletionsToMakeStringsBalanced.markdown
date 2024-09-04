@@ -8,7 +8,7 @@ categories: leetcode python
 ![alt text](/blog/public/img/MinimumDeletionsToMakeStringsBalanced.png)
 
 ## Approach
-
+The main approach is to automatically determine whether to delete encountered 'b' so far, or to delete the encountered 'a'
 
 ## Code
 ```python
